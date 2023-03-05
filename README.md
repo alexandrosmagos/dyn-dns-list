@@ -43,4 +43,4 @@ Users are responsible for their own use of this list and should conduct their ow
 
 ### License
 
-This project is licensed under the [MIT License](LICENSE.md).
+This project is licensed under the [Unlicense license](LICENSE).
