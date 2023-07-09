@@ -110,16 +110,6 @@ run.place
 linkpc.net
 line.pm
 work.gd
-dyndns.org
-dvrdns.org
-dyndns.tv
-dyndns.info
-homeip.net
-dyndns.biz
-mine.nu
-dnsalias.com
-dyndns-ip.com
-selfip.com
 at-band-camp.net
 ath.cx
 barrel-of-knowledge.info
@@ -557,7 +547,6 @@ gettrials.com
 4dq.com
 4pu.com
 3-a.net
-dsmtp.com
 dsmtp.com
 mynumber.org
 ns1.name
