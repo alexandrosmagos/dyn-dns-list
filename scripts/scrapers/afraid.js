@@ -17,12 +17,22 @@ async function initializeBrowser() {
 }
 
 async function navigatePage(url) {
-    const page = await browser.newPage();
-    page.setDefaultNavigationTimeout(60000);
-    await page.goto(url, { waitUntil: 'networkidle2' });
-    let body = await page.content();
-    await page.close();
-    return body;
+    const maxAttempts = 3;
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+        try {
+            const page = await browser.newPage();
+            page.setDefaultNavigationTimeout(60000);
+            await page.goto(url, { waitUntil: 'networkidle2' });
+            let body = await page.content();
+            await page.close();
+            return body;
+        } catch (err) {
+            console.error(`Failed to load page ${url} on attempt ${attempt + 1}`);
+            if (attempt + 1 === maxAttempts) {
+                throw err;
+            }
+        }
+    }
 }
 
 async function scrapePage(pageNumber) {
