@@ -1,4 +1,4 @@
-# Dynamic DNS domain list (2023) - From 40718 to 76175 domains
+# Dynamic DNS domain list (2023) - From 36046 domains
 
 While working on another project, I needed a list of domains being used for dynamic DNS, and since I've lost a few hours of my life, I decided to just release the list. Due to the repository getting some views lately and having some extra time, I decided to automate the scraping part, so that the list remains updated.
 
@@ -70,7 +70,7 @@ For subsequent runs, the script only adds new domains to the list. This ensures 
 - [ydns.io](https://ydns.io/) (2 domains)
 - [duckdns.org](https://www.duckdns.org/) (1 domain)
 
-Note the above counts are not updated with the new ones. Since last update the count went from 40718 to 76175 domains.
+Note the above counts are not updated with the new ones.
 They will be automatically be updated in the next commits.
 
 ## Back matter
