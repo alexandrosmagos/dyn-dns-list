@@ -1,5 +1,4 @@
 require("dotenv").config();
-const puppeteer = require("puppeteer");
 const fs = require("fs").promises;
 const path = require("path");
 
@@ -30,7 +29,10 @@ async function scrapeOptions(browser) {
 
 	await page.goto("https://my.noip.com/dynamic-dns");
 
-	// Get the domain options
+	await page.waitForSelector("#app_config", {
+        timeout: 30000
+    });
+
 	const domains = await page.evaluate(() => {
 		const configScript = document.querySelector("#app_config").textContent;
 		const config = JSON.parse(configScript);
