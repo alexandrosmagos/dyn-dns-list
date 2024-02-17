@@ -36,7 +36,7 @@ async function scrapeOptions(browser) {
 	const domains = await page.evaluate(() => {
 		const appConfigScript = document.querySelector("#app_config").textContent;
 		const config = JSON.parse(appConfigScript);
-		return config.domains; // Assuming the structure you've shown
+		return config.domains;
 	});
 
 	await page.close();

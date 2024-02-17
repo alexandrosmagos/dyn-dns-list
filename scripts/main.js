@@ -22,24 +22,24 @@ async function runScrapers() {
 
     try {
         browser = await puppeteer.launch({
-            headless: "new",
+            headless: false,
             executablePath: isLinux ? "/usr/bin/chromium-browser" : undefined,
             args: ['--window-size=1920,1080']
         });
 
         const scrapers = [
-            // afraid.scrape(browser),
-            // cloudns.scrape(browser),
-            // changeip.scrape(browser),
-            // dynv6.scrape(browser),
-            // gslb.scrape(browser),
+            afraid.scrape(browser),
+            cloudns.scrape(browser),
+            changeip.scrape(browser),
+            dynv6.scrape(browser),
+            gslb.scrape(browser),
             noip.scrape(browser),
-            // dynu.scrape(),
-            // dnsexit.scrape(),
-            // duiadns.scrape(),
-            // dyn.scrape(),
-            // nowdns.scrape(),
-            // pubyun.scrape()
+            dynu.scrape(),
+            dnsexit.scrape(),
+            duiadns.scrape(),
+            dyn.scrape(),
+            nowdns.scrape(),
+            pubyun.scrape()
         ];
 
         await Promise.all(scrapers);
