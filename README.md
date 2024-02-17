@@ -2,7 +2,7 @@
 
 **Domains Last Update: 17/02/2024**
 
-# Dynamic DNS domain list (2023) - 36046 domains
+# Dynamic DNS domain list (2024) - 30772 domains
 
 While working on another project, I needed a list of domains being used for dynamic DNS, and since I've lost a few hours of my life, I decided to just release the list. Due to the repository getting some views lately and having some extra time, I decided to automate the scraping part, so that the list remains updated.
 
@@ -57,13 +57,13 @@ For subsequent runs, the script only adds new domains to the list. This ensures 
 
 
 ### DNS Providers included:
-- [afraid.org](https://afraid.org/) (40,095 domains)
-- [dyn.com](https://www.oracle.com/cloud/networking/dns/) (293 domains)
-- [changeip.com](https://www.changeip.com/) (158 domains)
+- [afraid.org](https://afraid.org/) (30,163 domains)
+- [dyn.com](https://www.oracle.com/cloud/networking/dns/) (283 domains)
+- [changeip.com](https://www.changeip.com/) (157 domains)
 - [noip.com](https://www.noip.com/) (83 domains)
 - [now-dns.com](https://now-dns.com/) (32 domains)
-- [Dynu.com](https://www.dynu.com) (20 domains)
-- [pubyun.com](https://www.pubyun.com/) (9 domains)
+- [Dynu.com](https://www.dynu.com) (21 domains)
+- [pubyun.com](https://www.pubyun.com/) (11 domains)
 - [dynv6.com](https://dynv6.com/) (6 domains)
 - [gslb.me](https://www.gslb.me/) (6 domains)
 - [dnsexit.com](http://dnsexit.com/) (5 domains)
