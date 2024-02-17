@@ -36,7 +36,7 @@ async function navigatePage(url) {
 }
 
 async function scrapePage(pageNumber) {
-    // if (pageNumber === 22) return;
+// if (pageNumber === 22) return;
     let url = pageNumber === 1 ? `http://freedns.afraid.org/domain/registry/` : `http://freedns.afraid.org/domain/registry/page-${pageNumber}.html`;
 
     if (pageNumber === 1 || pageNumber % 10 === 0) console.log(`Scraping page ${pageNumber} from https://afraid.org...`);
