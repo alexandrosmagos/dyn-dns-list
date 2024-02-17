@@ -3,27 +3,41 @@ const path = require('path');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 const dataPath = path.join(__dirname, 'data');
+const csvFilePath = path.join(__dirname, '..', 'links.csv'); // Path for links.csv
 
 const files = fs.readdirSync(dataPath).filter(file => file.endsWith('.json'));
 
+// Initialize CSV writer with no append mode to overwrite the file for a clean start
 const csvWriter = createCsvWriter({
-    path: path.join(__dirname, '..', 'links.csv'),
+    path: csvFilePath,
     header: [
-        { id: 'domain', title: 'Domain' },
-        { id: 'retrievedAt', title: 'RetrievedAt' },
-        { id: 'provider', title: 'Provider' }
+        {id: 'domain', title: 'Domain'},
+        {id: 'retrievedAt', title: 'RetrievedAt'},
+        {id: 'provider', title: 'Provider'}
     ],
-    append: true
+    append: false
 });
 
-// Create write stream for links.txt
-const txtWriter = fs.createWriteStream(path.join(__dirname, '..', 'links.txt'), { flags: 'a' });
+async function writeCsv(data) {
+    await csvWriter.writeRecords(data)
+        .catch(err => console.error(`Failed to write CSV: ${err}`));
+}
 
-function start() {
-    files.forEach(file => {
+async function start() {
+    console.log('Writing CSV files...');
+
+    // Ensure we start with a fresh CSV file
+    if (fs.existsSync(csvFilePath)) {
+        fs.unlinkSync(csvFilePath);
+    }
+
+    for (let file of files) {
         const provider = path.basename(file, '.json');
         const filePath = path.join(dataPath, file);
-        const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+        const rawData = fs.readFileSync(filePath, 'utf-8');
+        const data = JSON.parse(rawData);
+
+        console.log(`${provider}: ${data.length} domains`);
 
         const csvData = data.map(entry => ({
             domain: entry.domain,
@@ -31,17 +45,10 @@ function start() {
             provider: provider
         }));
 
-        // Write domains to links.txt
-        data.forEach(entry => txtWriter.write(`${entry.domain}\n`));
+        // Write to CSV file
+        await writeCsv(csvData);
+    }
 
-        csvWriter
-            .writeRecords(csvData)
-            // .then(() => console.log(`The CSV file for ${provider} was written successfully`))
-            .catch(err => console.error(`Failed to write CSV for ${provider}: ${err}`));
-    });
-
-    txtWriter.end();
-    
     console.log('Done!');
 }
 
