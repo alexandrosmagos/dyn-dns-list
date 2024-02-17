@@ -25,42 +25,33 @@ async function scrapeOptions(browser) {
 	await page.type("#password", password);
 	await page.keyboard.press("Enter");
 
-	await page.waitForNavigation({ waitUntil: "load" });
+	await page.waitForNavigation({ waitUntil: "networkidle0" });
 
 	await page.goto("https://my.noip.com/dynamic-dns");
 
-	await page.waitForSelector("#app_config", {
-        timeout: 30000
-    });
+	await page.waitForSelector("#app_config", { timeout: 15000 });
 
 	const domains = await page.evaluate(() => {
-		const configScript = document.querySelector("#app_config").textContent;
-		const config = JSON.parse(configScript);
-		return {
-			free: config.domains.free,
-			enhanced: config.domains.enhanced,
-			retrievedAt: new Date().toISOString(),
-		};
+		const appConfigScript = document.querySelector("#app_config").textContent;
+		const config = JSON.parse(appConfigScript);
+		return config.domains;
 	});
 
 	await page.close();
 
 	let newDomains = 0;
-
-	for (const type in domains) {
-		for (const domain of domains[type]) {
-			if (domain.length < 2) continue;
-			const exists = data.some(entry => entry.domain === domain);
-			if (!exists) {
+	Object.keys(domains).forEach(type => {
+		domains[type].forEach(domain => {
+			if (!data.some(entry => entry.domain === domain)) {
 				data.push({
 					domain: domain,
 					type: type,
-					retrievedAt: domains.retrievedAt,
+					retrievedAt: new Date().toISOString(),
 				});
 				newDomains++;
 			}
-		}
-	}
+		});
+	});
 
 	console.log(`Added ${newDomains} new domains from https://my.noip.com`);
 	await fs.writeFile(filePath, JSON.stringify(data, null, 2));

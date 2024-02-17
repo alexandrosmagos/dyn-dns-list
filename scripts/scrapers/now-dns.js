@@ -40,7 +40,7 @@ async function scrapeOptions() {
 		}
 	});
 
-	console.log(`Added ${newDomains} new domains from https://now-dns.com/`);
+	console.log(`Added ${newDomains} new domains from https://now-dns.com`);
 
 	fs.writeFile(filePath, JSON.stringify(data, null, 2)).catch((err) => console.log(err));
 }

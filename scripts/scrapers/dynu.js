@@ -36,7 +36,7 @@ async function fetchAndParseDomains() {
             }
         });
 
-        console.log(`Added ${domains.length} new domains from dynu.com`);
+        console.log(`Added ${domains.length} new domains from https://dynu.com`);
         return domains;
     } catch (error) {
         console.error('Error fetching or parsing domains:', error);

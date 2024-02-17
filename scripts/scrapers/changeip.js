@@ -45,7 +45,7 @@ async function scrapeOptions(browser) {
         }
     }
 
-    console.log(`Added ${newDomains} new domains from https://www.changeip.com/`);
+    console.log(`Added ${newDomains} new domains from https://www.changeip.com`);
     await fs.writeFile(filePath, JSON.stringify(data, null, 2));
 }
 
