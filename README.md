@@ -57,13 +57,13 @@ For subsequent runs, the script only adds new domains to the list. This ensures 
 
 
 ### DNS Providers included:
-- [afraid.org](https://afraid.org/) (40,095 domains)
-- [dyn.com](https://www.oracle.com/cloud/networking/dns/) (293 domains)
-- [changeip.com](https://www.changeip.com/) (158 domains)
+- [afraid.org](https://afraid.org/) (30,163 domains)
+- [dyn.com](https://www.oracle.com/cloud/networking/dns/) (283 domains)
+- [changeip.com](https://www.changeip.com/) (157 domains)
 - [noip.com](https://www.noip.com/) (83 domains)
 - [now-dns.com](https://now-dns.com/) (32 domains)
-- [Dynu.com](https://www.dynu.com) (20 domains)
-- [pubyun.com](https://www.pubyun.com/) (9 domains)
+- [Dynu.com](https://www.dynu.com) (21 domains)
+- [pubyun.com](https://www.pubyun.com/) (11 domains)
 - [dynv6.com](https://dynv6.com/) (6 domains)
 - [gslb.me](https://www.gslb.me/) (6 domains)
 - [dnsexit.com](http://dnsexit.com/) (5 domains)
