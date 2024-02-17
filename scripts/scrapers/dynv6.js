@@ -3,7 +3,7 @@ const fs = require("fs").promises;
 const path = require("path");
 
 let data = [];
-const filePath = path.join(__dirname, "..", "Data", "dynv6.json");
+const filePath = path.join(__dirname, "..", "data", "dynv6.json");
 
 async function loadData() {
 	try {

@@ -4,7 +4,7 @@ const fs = require("fs").promises;
 const path = require("path");
 
 let data = [];
-const filePath = path.join(__dirname, "..", "Data", "pubyun.json");
+const filePath = path.join(__dirname, "..", "data", "pubyun.json");
 
 async function loadData() {
 	try {

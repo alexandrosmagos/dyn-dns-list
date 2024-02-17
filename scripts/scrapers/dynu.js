@@ -4,7 +4,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 let data = [];
-const filePath = path.join(__dirname, '..', 'Data', 'dynu.json');
+const filePath = path.join(__dirname, '..', 'data', 'dynu.json');
 
 async function loadData() {
     try {

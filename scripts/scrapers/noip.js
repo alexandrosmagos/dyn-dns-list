@@ -7,7 +7,7 @@ const username = process.env.NOIP_USERNAME;
 const password = process.env.NOIP_PASSWORD;
 
 let data = [];
-const filePath = path.join(__dirname, "..", "Data", "noip.json");
+const filePath = path.join(__dirname, "..", "data", "noip.json");
 
 async function loadData() {
 	try {

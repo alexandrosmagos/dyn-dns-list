@@ -4,7 +4,7 @@ const path = require('path');
 
 let domainData = [];
 let newDomains = 0;
-const filePath = path.join(__dirname, '..', 'Data', 'afraid.json');
+const filePath = path.join(__dirname, '..', 'data', 'afraid.json');
 
 async function navigatePage(browser, url) {
     const page = await browser.newPage();
