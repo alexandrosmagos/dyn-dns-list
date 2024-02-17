@@ -28,7 +28,7 @@ async function runScrapers() {
         });
 
         const scrapers = [
-            afraid.scrape(browser),
+            // afraid.scrape(browser),
             cloudns.scrape(browser),
             changeip.scrape(browser),
             dynv6.scrape(browser),
