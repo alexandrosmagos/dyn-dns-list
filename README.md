@@ -25,8 +25,6 @@ Upon execution of the main script (`main.js`), all the scrapers run concurrently
 
 The project uses Puppeteer for scraping websites that either require login or are behind cloudflare, or node fetch for simpler websites, and Cheerio for parsing and extracting information. Some of the scrapers, particularly `cloudns.net`, operate in a non-headless Chrome browser due to the need for manual captcha entry. This could have been solved with a captcha solving service, but not everyone has the time or wants to pay a few cents for such service.
 
-It's worth mentioning that `Dynu.com` is not included in the automated scraping process, as their registration system is currently not functional.
-
 If there are any more websites you know that provide Dynamic DNS, please open an issue, and I will automate that too.
 
 
