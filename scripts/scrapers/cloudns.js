@@ -21,10 +21,10 @@ async function loginAndScrapeDomains(browser) {
 
 	try {
 		await page.waitForSelector('iframe[src*="hcaptcha.com"]', { timeout: 5000 });
-		console.log("CAPTCHA found, stopping script.");
+		console.log("CAPTCHA found, skipping https://cloudns.net");
 		return;
 	} catch (error) {
-		console.log("No CAPTCHA found, continuing...");
+		// console.log("No CAPTCHA found, continuing...");
 	}
 
 	const usernameInput = await page.waitForSelector('xpath/.//*[@id="login2FAMail"]');

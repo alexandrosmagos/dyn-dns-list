@@ -24,6 +24,7 @@ async function runScrapers() {
         browser = await puppeteer.launch({
             headless: "new",
             executablePath: isLinux ? "/usr/bin/chromium-browser" : undefined,
+            args: ['--window-size=1920,1080']
         });
 
         const scrapers = [
