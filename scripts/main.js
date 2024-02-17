@@ -1,6 +1,8 @@
+const puppeteer = require('puppeteer');
+const os = require('os');
 const afraid = require('./scrapers/afraid.js');
 const changeip = require('./scrapers/changeip.js');
-const cloudns = require('./scrapers/cloudns.js'); //captcha
+const cloudns = require('./scrapers/cloudns.js');
 const dnsexit = require('./scrapers/dnsexit.js');
 const duiadns = require('./scrapers/duiadns');
 const dyn = require('./scrapers/dyn.js');
@@ -13,32 +15,42 @@ const dynu = require('./scrapers/dynu.js');
 
 const csv = require('./csv');
 
-const startTime = new Date();
+async function runScrapers() {
+    const startTime = new Date();
+    const isLinux = os.platform() === "linux";
+    let browser;
 
-const scrapers = [
-    afraid.scrape(),
-    dynu.scrape(),
-    cloudns.scrape(),
-    changeip.scrape(),
-    dnsexit.scrape(),
-    duiadns.scrape(),
-    dyn.scrape(),
-    dynv6.scrape(),
-    gslb.scrape(),
-    noip.scrape(),
-    nowdns.scrape(),
-    pubyun.scrape()
-];
+    try {
+        browser = await puppeteer.launch({
+            headless: "new",
+            executablePath: isLinux ? "/usr/bin/chromium-browser" : undefined,
+        });
 
-Promise.all(scrapers)
-    .then(() => {
-        return csv.start();
-    })
-    .then(() => {
+        const scrapers = [
+            afraid.scrape(browser),
+            cloudns.scrape(browser),
+            changeip.scrape(browser),
+            dynv6.scrape(browser),
+            gslb.scrape(browser),
+            noip.scrape(browser),
+            dynu.scrape(),
+            dnsexit.scrape(),
+            duiadns.scrape(),
+            dyn.scrape(),
+            nowdns.scrape(),
+            pubyun.scrape()
+        ];
+
+        await Promise.all(scrapers);
+        await csv.start();
+    } catch (error) {
+        console.error('There was an error running the scrapers:', error);
+    } finally {
+        await browser.close();
         const endTime = new Date();
         const timeTaken = (endTime - startTime) / (1000 * 60); // Convert milliseconds to minutes
         console.log(`The script took ${timeTaken} minutes to complete.`);
-    })
-    .catch((error) => {
-        console.error('There was an error running the scrapers:', error);
-    });
+    }
+}
+
+runScrapers();

@@ -14,13 +14,11 @@ async function loadData() {
 		let fileData = await fs.readFile(filePath);
 		data = JSON.parse(fileData);
 	} catch (err) {
-		// console.log("No existing file found, starting fresh.");
 		data = [];
 	}
 }
 
-async function scrapeOptions() {
-	const browser = await puppeteer.launch({ headless: "new" });
+async function scrapeOptions(browser) {
 	const page = await browser.newPage();
 	await page.goto("https://www.noip.com/login");
 
@@ -43,14 +41,14 @@ async function scrapeOptions() {
 		};
 	});
 
-	await browser.close();
+	await page.close();
 
 	let newDomains = 0;
 
 	for (const type in domains) {
 		for (const domain of domains[type]) {
 			if (domain.length < 2) continue;
-			const exists = data.some((entry) => entry.domain === domain);
+			const exists = data.some(entry => entry.domain === domain);
 			if (!exists) {
 				data.push({
 					domain: domain,
@@ -63,20 +61,12 @@ async function scrapeOptions() {
 	}
 
 	console.log(`Added ${newDomains} new domains from https://my.noip.com`);
-
-	fs.writeFile(filePath, JSON.stringify(data, null, 2)).catch((err) => console.log(err));
+	await fs.writeFile(filePath, JSON.stringify(data, null, 2));
 }
 
-function scrape() {
-    return new Promise((resolve, reject) => {
-        loadData()
-            .then(() => {
-                scrapeOptions()
-                    .then(resolve)
-                    .catch(reject);
-            })
-            .catch(reject);
-    });
+async function scrape(browser) {
+	await loadData();
+	await scrapeOptions(browser);
 }
 
 module.exports = { scrape };

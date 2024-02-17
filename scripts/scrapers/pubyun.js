@@ -11,7 +11,6 @@ async function loadData() {
 		let fileData = await fs.readFile(filePath);
 		data = JSON.parse(fileData);
 	} catch (err) {
-		// console.log("No existing file found, starting fresh.");
 		data = [];
 	}
 }
@@ -28,7 +27,7 @@ async function scrapeDomains() {
 	let newDomains = 0;
 
 	for (const domain of foundDomains) {
-		const exists = data.some((entry) => entry.domain === domain);
+		const exists = data.some(entry => entry.domain === domain);
 
 		if (!exists) {
 			data.push({
@@ -40,20 +39,12 @@ async function scrapeDomains() {
 	}
 
 	console.log(`Added ${newDomains} new domains from https://www.pubyun.com`);
-
-	fs.writeFile(filePath, JSON.stringify(data, null, 2)).catch((err) => console.log(err));
+	await fs.writeFile(filePath, JSON.stringify(data, null, 2));
 }
 
-function scrape() {
-    return new Promise((resolve, reject) => {
-        loadData()
-            .then(() => {
-                scrapeDomains()
-                    .then(resolve)
-                    .catch(reject);
-            })
-            .catch(reject);
-    });
+async function scrape() {
+	await loadData();
+	await scrapeDomains();
 }
 
 module.exports = { scrape };

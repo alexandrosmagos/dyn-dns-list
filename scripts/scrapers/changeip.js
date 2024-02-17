@@ -10,16 +10,14 @@ async function loadData() {
         let fileData = await fs.readFile(filePath);
         data = JSON.parse(fileData);
     } catch (err) {
-        // console.log('No existing file found, starting fresh.');
         data = [];
     }
 }
 
-async function scrapeOptions() {
-    const browser = await puppeteer.launch({ headless: "new" });
+async function scrapeOptions(browser) {
     const page = await browser.newPage();
 
-    // Add to card
+    // Add to cart
     await page.goto('https://www.changeip.com/accounts/cart.php?a=add&bid=1');
 
     // View Domains
@@ -32,10 +30,9 @@ async function scrapeOptions() {
         }));
     });
 
-    await browser.close();
+    await page.close();
 
     let newDomains = 0;
-
     for (const option of options) {
         const exists = data.some(entry => entry.id === option.id);
         if (!exists) {
@@ -49,21 +46,12 @@ async function scrapeOptions() {
     }
 
     console.log(`Added ${newDomains} new domains from https://www.changeip.com/`);
-
-    fs.writeFile(filePath, JSON.stringify(data, null, 2)).catch(err => console.log(err));
+    await fs.writeFile(filePath, JSON.stringify(data, null, 2));
 }
 
-function scrape() {
-    return new Promise((resolve, reject) => {
-        loadData()
-            .then(() => {
-                scrapeOptions()
-                    .then(resolve)
-                    .catch(reject);
-            })
-            .catch(reject); 
-    });
+async function scrape(browser) {
+    await loadData();
+    await scrapeOptions(browser);
 }
-
 
 module.exports = { scrape };

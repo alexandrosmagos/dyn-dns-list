@@ -11,44 +11,41 @@ async function loadData() {
 		let fileData = await fs.readFile(filePath);
 		data = JSON.parse(fileData);
 	} catch (err) {
-		// console.log('No existing file found, starting fresh.');
 		data = [];
 	}
 }
 
-async function loginAndScrapeDomains() {
-	const browser = await puppeteer.launch({ headless: "new" });
+async function loginAndScrapeDomains(browser) {
 	const page = await browser.newPage();
-	await page.goto("https://www.cloudns.net/index/show/login/");
+	await page.goto("https://www.cloudns.net/index/show/login/", { waitUntil: "networkidle0" });
+
+	try {
+		await page.waitForSelector('iframe[src*="hcaptcha.com"]', { timeout: 5000 });
+		console.log("CAPTCHA found, stopping script.");
+		return;
+	} catch (error) {
+		console.log("No CAPTCHA found, continuing...");
+	}
 
 	const usernameInput = await page.waitForSelector('xpath/.//*[@id="login2FAMail"]');
-	await usernameInput.type(process.env.clouddns_USERNAME);
+	await usernameInput.type(process.env.CLOUDDNS_USERNAME);
 
 	const passwordInput = await page.waitForSelector('xpath/.//*[@id="login2FAPassword"]');
-	await passwordInput.type(process.env.clouddns_PASSWORD);
-
-	// wait 15 seconds for user to complete captcha
-	// await new Promise((resolve) => {
-	// 	setTimeout(resolve, 15000);
-	// });
+	await passwordInput.type(process.env.CLOUDDNS_PASSWORD);
 
 	await passwordInput.focus();
-
 	await page.keyboard.press("Enter");
-
 	await page.waitForNavigation();
 
-	// Navigate to the page with the select box
 	await page.goto("https://www.cloudns.net/ajaxPages.php?action=newzone&show=freeZone");
 
 	const domains = await page.evaluate(() => {
-		return Array.from(document.querySelectorAll("#freeDomain option")).map((option) => option.textContent.trim());
+		return Array.from(document.querySelectorAll("#freeDomain option")).map(option => option.textContent.trim());
 	});
 
 	let newDomains = 0;
-
 	for (const domain of domains) {
-		const exists = data.some((entry) => entry.domain === domain);
+		const exists = data.some(entry => entry.domain === domain);
 		if (!exists) {
 			data.push({
 				domain: domain,
@@ -59,20 +56,13 @@ async function loginAndScrapeDomains() {
 	}
 
 	console.log(`Added ${newDomains} new domains from https://cloudns.net`);
-	await browser.close();
-	await fs.writeFile(filePath, JSON.stringify(data, null, 2)).catch((err) => console.log(err));
+	await page.close();
+	await fs.writeFile(filePath, JSON.stringify(data, null, 2));
 }
 
-function scrape() {
-    return new Promise((resolve, reject) => {
-        loadData()
-            .then(() => {
-                loginAndScrapeDomains()
-                    .then(resolve)   // resolve the promise when loginAndScrapeDomains is done
-                    .catch(reject);  // if there's an error, pass it to the main promise
-            })
-            .catch(reject); // if there's an error, pass it to the main promise
-    });
+async function scrape(browser) {
+	await loadData();
+	await loginAndScrapeDomains(browser);
 }
 
 module.exports = { scrape };

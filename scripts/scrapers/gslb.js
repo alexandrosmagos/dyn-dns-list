@@ -11,22 +11,21 @@ async function loadData() {
 		let fileData = await fs.readFile(filePath);
 		data = JSON.parse(fileData);
 	} catch (err) {
-		// console.log("No existing file found, starting fresh.");
 		data = [];
 	}
 }
 
-async function loginAndScrapeDomains() {
-	const browser = await puppeteer.launch({ headless: "new" });
+
+async function loginAndScrapeDomains(browser) {
 	const page = await browser.newPage();
 	await page.goto("https://gui.gslb.me/GSLB.ME-GUI/");
 
-	// Wait for the inputs to load
+
 	await page.waitForSelector("tbody input");
 
 	// Fill in the login form
-	await page.type('tbody input[type="text"]:first-child', process.env.gslb_USERNAME);
-	await page.type('tbody input[type="password"]', process.env.gslb_PASSWORD);
+	await page.type('tbody input[type="text"]:first-child', process.env.GSLB_USERNAME);
+	await page.type('tbody input[type="password"]', process.env.GSLB_PASSWORD);
 
 	await page.keyboard.press("Enter");
 
@@ -35,7 +34,7 @@ async function loginAndScrapeDomains() {
 	await new Promise(resolve => setTimeout(resolve, 1500));
 
 	const domains = await page.evaluate(() => {
-		return Array.from(document.querySelectorAll(".v-tree-node-caption > div > span")).map((span) => span.textContent.trim());
+		return Array.from(document.querySelectorAll(".v-tree-node-caption > div > span")).map(span => span.textContent.trim());
 	});
 
 	let newDomains = 0;
@@ -46,7 +45,7 @@ async function loginAndScrapeDomains() {
 		if (!domainRegex.test(domain)) continue;
 		if (domain.includes("[")) continue;
 
-		const exists = data.some((entry) => entry.domain === domain);
+		const exists = data.some(entry => entry.domain === domain);
 		if (!exists) {
 			data.push({
 				domain: domain,
@@ -57,20 +56,13 @@ async function loginAndScrapeDomains() {
 	}
 
 	console.log(`Added ${newDomains} new domains from https://gui.gslb.me`);
-	await browser.close();
-	await fs.writeFile(filePath, JSON.stringify(data, null, 2)).catch((err) => console.log(err));
+	await page.close();
+	await fs.writeFile(filePath, JSON.stringify(data, null, 2));
 }
 
-function scrape() {
-    return new Promise((resolve, reject) => {
-        loadData()
-            .then(() => {
-                loginAndScrapeDomains()
-                    .then(resolve)
-                    .catch(reject);
-            })
-            .catch(reject);
-    });
+async function scrape(browser) {
+	await loadData();
+	await loginAndScrapeDomains(browser);
 }
 
 module.exports = { scrape };

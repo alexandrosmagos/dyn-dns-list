@@ -1,55 +1,43 @@
-const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
 const fs = require('fs').promises;
 const path = require('path');
 
 let domainData = [];
 let newDomains = 0;
-let pageNumber = 1;
-let browser;
-
 const filePath = path.join(__dirname, '..', 'Data', 'afraid.json');
 
-async function initializeBrowser() {
-    browser = await puppeteer.launch({
-        headless: "new"
-    });
-}
-
-async function navigatePage(url) {
-    const maxAttempts = 3;
-    for (let attempt = 0; attempt < maxAttempts; attempt++) {
-        try {
-            const page = await browser.newPage();
-            page.setDefaultNavigationTimeout(60000);
-            await page.goto(url, { waitUntil: 'networkidle2' });
-            let body = await page.content();
-            await page.close();
-            return body;
-        } catch (err) {
-            console.error(`Failed to load page ${url} on attempt ${attempt + 1}`);
-            if (attempt + 1 === maxAttempts) {
-                throw err;
-            }
-        }
+async function navigatePage(browser, url) {
+    const page = await browser.newPage();
+    page.setDefaultNavigationTimeout(60000);
+    try {
+        await page.goto(url, { waitUntil: 'networkidle2' });
+        const body = await page.content();
+        await page.close();
+        return body;
+    } catch (err) {
+        console.error(`Failed to load page ${url}: ${err}`);
+        await page.close();
+        throw err;
     }
 }
 
-async function scrapePage(pageNumber) {
-// if (pageNumber === 22) return;
+async function scrapePage(browser, pageNumber) {
     let url = pageNumber === 1 ? `http://freedns.afraid.org/domain/registry/` : `http://freedns.afraid.org/domain/registry/page-${pageNumber}.html`;
 
-    if (pageNumber === 1 || pageNumber % 10 === 0) console.log(`Scraping page ${pageNumber} from https://afraid.org...`);
-    let body = await navigatePage(url);
+    if (pageNumber === 1 || pageNumber % 50 === 0) {
+        console.log(`Scraping page ${pageNumber} from https://afraid.org...`);
+    }
+    let body = await navigatePage(browser, url);
 
     let $ = cheerio.load(body);
-    let tableRows = $('tr.trd, tr.trl');
+    let title = $('title').text();
+    let match = title.match(/Page \d+ of (\d+)/);
+    let totalPages = match ? parseInt(match[1], 10) : pageNumber;
 
-    let validDataFound = false;
+    let tableRows = $('tr.trd, tr.trl');
 
     tableRows.each((index, row) => {
         let columns = $(row).find('td');
-
         if (columns.length === 4) {
             let domainIdUrl = $(columns[0]).find('a:first').attr('href');
             let id = domainIdUrl ? domainIdUrl.split('=')[1] : null;
@@ -59,51 +47,29 @@ async function scrapePage(pageNumber) {
 
             if (id && !domain.includes("Next page") && !age.includes("Next page")) {
                 let existingDomain = domainData.find(data => data.id === id);
-                if (existingDomain) {
-                    if (existingDomain.age !== age) {
-                        existingDomain.age = age; // update age if different
-                    }
-                } else {
-                    let data = {
-                        id: id,
-                        domain: domain,
-                        age: age,
-                        retrievedAt: retrievedAt
-                    };
-                    domainData.push(data);
+                if (!existingDomain) {
+                    domainData.push({ id, domain, age, retrievedAt });
                     newDomains++;
                 }
-                validDataFound = true;
             }
         }
     });
 
-    if (validDataFound) {
-        // await new Promise(resolve => setTimeout(resolve, 1000));
-        await scrapePage(pageNumber + 1);
+    if (pageNumber < totalPages) {
+        await scrapePage(browser, pageNumber + 1);
     } else {
-        console.log(`Reached the last page ${pageNumber}, stopping...`);
+        console.log(`Reached the end, total pages: ${totalPages}, stopping...`);
     }
 }
 
-function scrape() {
-    return new Promise((resolve, reject) => {
-        initializeBrowser()
-            .then(() => {
-                scrapePage(pageNumber)
-                    .then(() => {
-                        browser.close();
-                        fs.writeFile(filePath, JSON.stringify(domainData, null, 2))
-                            .then(() => {
-                                console.log(`Added ${newDomains} new domains from http://afraid.org`); // log the new domains count
-                                resolve();
-                            })
-                            .catch(reject);
-                    })
-                    .catch(reject);
-            })
-            .catch(reject);
-    });
+async function scrape(browser) {
+    try {
+        await scrapePage(browser, 1);
+        await fs.writeFile(filePath, JSON.stringify(domainData, null, 2));
+        console.log(`Added ${newDomains} new domains from http://afraid.org`);
+    } catch (error) {
+        console.error('An error occurred during the scraping process:', error);
+    }
 }
 
 module.exports = { scrape };
