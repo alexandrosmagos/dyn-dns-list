@@ -9,12 +9,15 @@ const gslb = require('./scrapers/gslb.js');
 const noip = require('./scrapers/noip.js');
 const nowdns = require('./scrapers/now-dns.js');
 const pubyun = require('./scrapers/pubyun.js');
+const dynu = require('./scrapers/dynu.js');
 
 const csv = require('./csv');
 
-const startTime = new Date(); // Record the start time
+const startTime = new Date();
 
 const scrapers = [
+    afraid.scrape(),
+    dynu.scrape(),
     cloudns.scrape(),
     changeip.scrape(),
     dnsexit.scrape(),
@@ -24,8 +27,7 @@ const scrapers = [
     gslb.scrape(),
     noip.scrape(),
     nowdns.scrape(),
-    pubyun.scrape(),
-    afraid.scrape()
+    pubyun.scrape()
 ];
 
 Promise.all(scrapers)
@@ -33,7 +35,7 @@ Promise.all(scrapers)
         return csv.start();
     })
     .then(() => {
-        const endTime = new Date(); // Record the end time
+        const endTime = new Date();
         const timeTaken = (endTime - startTime) / (1000 * 60); // Convert milliseconds to minutes
         console.log(`The script took ${timeTaken} minutes to complete.`);
     })
