@@ -1,3 +1,7 @@
+> **Notice:** Due to a significant increase in traffic to this repository recently, all domains have been scraped and updated as of today (17/02/2024). We've added an automatic scraper for the Dynu provider and are currently developing a workflow to automatically run and update the files. Stay tuned for more updates.
+
+**Domains Last Update: 17/02/2024**
+
 # Dynamic DNS domain list (2023) - 36046 domains
 
 While working on another project, I needed a list of domains being used for dynamic DNS, and since I've lost a few hours of my life, I decided to just release the list. Due to the repository getting some views lately and having some extra time, I decided to automate the scraping part, so that the list remains updated.
