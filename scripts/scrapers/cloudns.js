@@ -17,7 +17,7 @@ async function loadData() {
 }
 
 async function loginAndScrapeDomains() {
-	const browser = await puppeteer.launch({ headless: false });
+	const browser = await puppeteer.launch({ headless: "new" });
 	const page = await browser.newPage();
 	await page.goto("https://www.cloudns.net/index/show/login/");
 
@@ -28,9 +28,9 @@ async function loginAndScrapeDomains() {
 	await passwordInput.type(process.env.clouddns_PASSWORD);
 
 	// wait 15 seconds for user to complete captcha
-	await new Promise((resolve) => {
-		setTimeout(resolve, 15000);
-	});
+	// await new Promise((resolve) => {
+	// 	setTimeout(resolve, 15000);
+	// });
 
 	await passwordInput.focus();
 
