@@ -29,17 +29,17 @@ async function runScrapers() {
 
         const scrapers = [
             // afraid.scrape(browser),
-            cloudns.scrape(browser),
-            changeip.scrape(browser),
-            dynv6.scrape(browser),
-            gslb.scrape(browser),
+            // cloudns.scrape(browser),
+            // changeip.scrape(browser),
+            // dynv6.scrape(browser),
+            // gslb.scrape(browser),
             noip.scrape(browser),
-            dynu.scrape(),
-            dnsexit.scrape(),
-            duiadns.scrape(),
-            dyn.scrape(),
-            nowdns.scrape(),
-            pubyun.scrape()
+            // dynu.scrape(),
+            // dnsexit.scrape(),
+            // duiadns.scrape(),
+            // dyn.scrape(),
+            // nowdns.scrape(),
+            // pubyun.scrape()
         ];
 
         await Promise.all(scrapers);

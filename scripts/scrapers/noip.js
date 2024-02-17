@@ -29,6 +29,8 @@ async function scrapeOptions(browser) {
 
 	await page.goto("https://my.noip.com/dynamic-dns");
 
+	console.log(await page.content());
+
 	await page.waitForSelector("#app_config", { timeout: 15000 });
 
 	const domains = await page.evaluate(() => {
