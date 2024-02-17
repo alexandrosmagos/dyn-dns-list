@@ -2,7 +2,7 @@ name: Update CSV and TXT Files
 
 on:
   schedule:
-    - cron: '32 21 * * *'
+    - cron: '0 21 * * *'
   workflow_dispatch:
 
 jobs:
@@ -18,12 +18,20 @@ jobs:
         with:
           node-version: 21
           cache: 'npm'
+          cache-dependency-path: scripts/package-lock.json
+
+      - name: Change to scripts directory
+        run: cd scripts
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          cd scripts
+          npm ci
 
       - name: Run main script
-        run: node scripts/main.js
+        run: |
+          cd scripts
+          node main.js
         env:
           NOIP_USERNAME: ${{ secrets.NOIP_USERNAME }}
           NOIP_PASSWORD: ${{ secrets.NOIP_PASSWORD }}
