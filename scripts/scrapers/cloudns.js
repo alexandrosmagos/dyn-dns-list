@@ -21,10 +21,10 @@ async function loginAndScrapeDomains() {
 	const page = await browser.newPage();
 	await page.goto("https://www.cloudns.net/index/show/login/");
 
-	const usernameInput = await page.waitForXPath('//*[@id="login2FAMail"]');
+	const usernameInput = await page.waitForSelector('xpath/.//*[@id="login2FAMail"]');
 	await usernameInput.type(process.env.clouddns_USERNAME);
 
-	const passwordInput = await page.waitForXPath('//*[@id="login2FAPassword"]');
+	const passwordInput = await page.waitForSelector('xpath/.//*[@id="login2FAPassword"]');
 	await passwordInput.type(process.env.clouddns_PASSWORD);
 
 	// wait 15 seconds for user to complete captcha
