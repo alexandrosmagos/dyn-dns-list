@@ -23,20 +23,20 @@ async function scrapeOptions(browser) {
 
 	await page.type("#username", username);
 	await page.type("#password", password);
+
+	await page.focus('#password');
 	await page.keyboard.press("Enter");
 
 	await page.waitForNavigation({ waitUntil: "networkidle0" });
 
 	await page.goto("https://my.noip.com/dynamic-dns");
 
-	console.log(await page.content());
-
 	await page.waitForSelector("#app_config", { timeout: 15000 });
 
 	const domains = await page.evaluate(() => {
 		const appConfigScript = document.querySelector("#app_config").textContent;
 		const config = JSON.parse(appConfigScript);
-		return config.domains;
+		return config.domains; // Assuming the structure you've shown
 	});
 
 	await page.close();
