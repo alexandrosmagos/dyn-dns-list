@@ -1,6 +1,6 @@
-> **Notice:** Due to a significant increase in traffic to this repository recently, all domains have been scraped and updated as of today (17/02/2024). We've added an automatic scraper for the Dynu provider and are currently developing a workflow to automatically run and update the files. Stay tuned for more updates.
+> **Notice:** Due to a significant increase in traffic to this repository recently, all domains have been scraped and updated as of today (18/02/2024). We've added an automatic scraper for the Dynu provider and are doing the final touch ups to the daily workflow that runs and updates the links.
 
-**Domains Last Update: 17/02/2024**
+**Domains Last Update: 18/02/2024**
 
 # Dynamic DNS domain list (2024) - 30772 domains
 
@@ -27,7 +27,7 @@ This project is a NodeJS application which is designed to automate the scraping 
 
 Upon execution of the main script (`main.js`), all the scrapers run concurrently and fetch the latest data from the respective DNS provider websites. Post completion, a consolidated list of all the domains, along with their retrieved date and provider, is generated in both CSV and TXT formats and stored in the root directory of the project.
 
-The project uses Puppeteer for scraping websites that either require login or are behind cloudflare, or node fetch for simpler websites, and Cheerio for parsing and extracting information. Some of the scrapers, particularly `cloudns.net`, operate in a non-headless Chrome browser due to the need for manual captcha entry. This could have been solved with a captcha solving service, but not everyone has the time or wants to pay a few cents for such service.
+The project uses Puppeteer for scraping websites that either require login or are behind cloudflare, or node fetch for simpler websites, and Cheerio for parsing and extracting information.
 
 If there are any more websites you know that provide Dynamic DNS, please open an issue, and I will automate that too.
 
@@ -62,7 +62,7 @@ For subsequent runs, the script only adds new domains to the list. This ensures 
 - [changeip.com](https://www.changeip.com/) (157 domains)
 - [noip.com](https://www.noip.com/) (83 domains)
 - [now-dns.com](https://now-dns.com/) (32 domains)
-- [Dynu.com](https://www.dynu.com) (21 domains)
+- [dynu.com](https://www.dynu.com) (21 domains)
 - [pubyun.com](https://www.pubyun.com/) (11 domains)
 - [dynv6.com](https://dynv6.com/) (6 domains)
 - [gslb.me](https://www.gslb.me/) (6 domains)
