@@ -15,16 +15,32 @@ const dynu = require('./scrapers/dynu.js');
 
 const csv = require('./csv');
 
+async function getChromiumExecutablePath() {
+    const linuxPaths = [
+        '/usr/bin/chromium-browser', // Common in Ubuntu, Debian
+        '/usr/bin/chromium', // Common in Arch Linux, Fedora
+    ];
+
+    for (const path of linuxPaths) {
+        if (fs.existsSync(path)) {
+            return path;
+        }
+    }
+
+    throw new Error('Chromium executable not found in expected paths');
+}
+
 async function runScrapers() {
     const startTime = new Date();
     const isLinux = os.platform() === "linux";
+    const path = (isLinux) ? await getChromiumExecutablePath() : undefined;
     let browser;
 
     try {
         browser = await puppeteer.launch({
-            headless: false,
-            executablePath: isLinux ? "/usr/bin/chromium-browser" : undefined,
-            args: ['--window-size=1920,1080']
+            headless: "new",
+            executablePath: path,
+            args: ['--window-size=1920,1080'] // Makes the scraping easier as some websites hide elements on smaller screens
         });
 
         const scrapers = [
