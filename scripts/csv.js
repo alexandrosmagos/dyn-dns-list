@@ -4,51 +4,52 @@ const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 const dataPath = path.join(__dirname, 'data');
 const csvFilePath = path.join(__dirname, '..', 'links.csv');
+const txtFilePath = path.join(__dirname, '..', 'links.txt');
 
 const files = fs.readdirSync(dataPath).filter(file => file.endsWith('.json'));
 
-// Initialize CSV writer with no append mode to overwrite the file for a clean start
 const csvWriter = createCsvWriter({
     path: csvFilePath,
     header: [
-        {id: 'domain', title: 'Domain'},
-        {id: 'retrievedAt', title: 'RetrievedAt'},
-        {id: 'provider', title: 'Provider'}
+        { id: 'domain', title: 'Domain' },
+        { id: 'retrievedAt', title: 'RetrievedAt' },
+        { id: 'provider', title: 'Provider' }
     ],
     append: false
 });
 
 async function writeCsv(data) {
     await csvWriter.writeRecords(data)
+        .then(() => console.log('CSV file written successfully.'))
         .catch(err => console.error(`Failed to write CSV: ${err}`));
 }
 
 async function start() {
-    console.log('Writing CSV files...');
+    console.log('Writing CSV and TXT files...');
 
-    // Ensure we start with a fresh CSV file
-    if (fs.existsSync(csvFilePath)) {
-        fs.unlinkSync(csvFilePath);
-    }
-
+    // Combine data from all JSON files
+    let combinedData = [];
     for (let file of files) {
         const provider = path.basename(file, '.json');
         const filePath = path.join(dataPath, file);
         const rawData = fs.readFileSync(filePath, 'utf-8');
         const data = JSON.parse(rawData);
 
-        console.log(`${provider}: ${data.length} domains`);
-
-        const csvData = data.map(entry => ({
+        combinedData.push(...data.map(entry => ({
             domain: entry.domain,
             retrievedAt: entry.retrievedAt,
             provider: provider
-        }));
-
-        await writeCsv(csvData);
+        })));
     }
 
-    console.log('Done!');
+    const uniqueDomains = [...new Set(combinedData.map(entry => entry.domain))];
+
+    // Write to links.txt
+    fs.writeFileSync(txtFilePath, uniqueDomains.join('\n'));
+    console.log(`TXT file written with ${uniqueDomains.length} unique domains.`);
+
+    // Write to links.csv
+    await writeCsv(combinedData);
 }
 
 module.exports = { start };
