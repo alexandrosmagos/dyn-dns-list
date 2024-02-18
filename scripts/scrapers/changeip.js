@@ -1,26 +1,16 @@
-const puppeteer = require('puppeteer');
 const fs = require('fs').promises;
 const path = require('path');
+const { loadData, saveDomains } = require('../scraperUtils');
 
-let data = [];
 const filePath = path.join(__dirname, '..', 'data', 'changeip.json');
-
-async function loadData() {
-    try {
-        let fileData = await fs.readFile(filePath);
-        data = JSON.parse(fileData);
-    } catch (err) {
-        data = [];
-    }
-}
 
 async function scrapeOptions(browser) {
     const page = await browser.newPage();
 
-    // Add to cart
+    // Navigate to add to cart page
     await page.goto('https://www.changeip.com/accounts/cart.php?a=add&bid=1');
 
-    // View Domains
+    // Navigate to view domains page
     await page.goto('https://www.changeip.com/accounts/cart.php?a=confproduct&i=0');
 
     const options = await page.evaluate(() => {
@@ -32,26 +22,27 @@ async function scrapeOptions(browser) {
 
     await page.close();
 
-    let newDomains = 0;
+    return options;
+}
+
+async function scrape(browser) {
+    data = await loadData(filePath);
+    const options = await scrapeOptions(browser);
+
+    let uniqueNewDomains = [];
     for (const option of options) {
         const exists = data.some(entry => entry.id === option.id);
         if (!exists) {
-            data.push({
+            uniqueNewDomains.push({
                 id: option.id,
                 domain: option.domain,
                 retrievedAt: new Date().toISOString()
             });
-            newDomains++;
         }
     }
 
-    console.log(`Added ${newDomains} new domains from https://www.changeip.com`);
-    await fs.writeFile(filePath, JSON.stringify(data, null, 2));
-}
-
-async function scrape(browser) {
-    await loadData();
-    await scrapeOptions(browser);
+    if (uniqueNewDomains.length > 0) await saveDomains(filePath, [...data, ...uniqueNewDomains]);
+    console.log(`Added ${uniqueNewDomains.length} new domains from https://changeip.com`);
 }
 
 module.exports = { scrape };

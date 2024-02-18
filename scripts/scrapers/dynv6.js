@@ -1,51 +1,29 @@
 const puppeteer = require("puppeteer");
-const fs = require("fs").promises;
 const path = require("path");
+const { loadData, saveDomains } = require('../scraperUtils');
 
-let data = [];
 const filePath = path.join(__dirname, "..", "data", "dynv6.json");
-
-async function loadData() {
-	try {
-		let fileData = await fs.readFile(filePath);
-		data = JSON.parse(fileData);
-	} catch (err) {
-		data = [];
-	}
-}
-
 
 async function scrapeDomains(browser) {
 	const page = await browser.newPage();
 	await page.goto("https://dynv6.com/");
+	const options = await page.evaluate(() => Array.from(document.querySelectorAll("#domain option"), option => option.textContent.trim()));
 
-	const options = await page.evaluate(() => {
-		return Array.from(document.querySelectorAll("#domain option")).map(option => option.textContent.trim());
-	});
+	const domains = options.filter(domain => domain !== "delegate your own domain …").map(domain => ({
+		domain: domain,
+		retrievedAt: new Date().toISOString(),
+	}));
 
-	let newDomains = 0;
-
-	for (const domain of options) {
-		if (domain === "delegate your own domain …") continue;
-		const exists = data.some(entry => entry.domain === domain);
-		if (!exists) {
-			data.push({
-				domain: domain,
-				retrievedAt: new Date().toISOString(),
-			});
-			newDomains++;
-		}
-	}
-
-	console.log(`Added ${newDomains} new domains from https://dynv6.com/`);
 	await page.close();
-	await fs.writeFile(filePath, JSON.stringify(data, null, 2));
+	return domains;
 }
 
-
 async function scrape(browser) {
-	await loadData();
-	await scrapeDomains(browser);
+	let data = await loadData(filePath);
+	const newDomains = await scrapeDomains(browser);
+	const uniqueNewDomains = newDomains.filter(nd => !data.some(d => d.domain === nd.domain));
+	if (uniqueNewDomains.length > 0) await saveDomains(filePath, [...data, ...uniqueNewDomains]);
+	console.log(`Added ${uniqueNewDomains.length} new domains from https://dynv6.com`);
 }
 
 module.exports = { scrape };

@@ -1,19 +1,9 @@
 require("dotenv").config();
 const puppeteer = require("puppeteer");
-const fs = require("fs").promises;
 const path = require("path");
+const { loadData, saveDomains } = require('../scraperUtils');
 
-let data = [];
 const filePath = path.join(__dirname, "..", "data", "cloudns.json");
-
-async function loadData() {
-	try {
-		let fileData = await fs.readFile(filePath);
-		data = JSON.parse(fileData);
-	} catch (err) {
-		data = [];
-	}
-}
 
 async function loginAndScrapeDomains(browser) {
 	const page = await browser.newPage();
@@ -22,9 +12,9 @@ async function loginAndScrapeDomains(browser) {
 	try {
 		await page.waitForSelector('iframe[src*="hcaptcha.com"]', { timeout: 5000 });
 		console.log("CAPTCHA found, skipping https://cloudns.net");
-		return;
+		return [];
 	} catch (error) {
-		// console.log("No CAPTCHA found, continuing...");
+		// CAPTCHA not found, continuing...
 	}
 
 	const usernameInput = await page.waitForSelector('xpath/.//*[@id="login2FAMail"]');
@@ -43,26 +33,19 @@ async function loginAndScrapeDomains(browser) {
 		return Array.from(document.querySelectorAll("#freeDomain option")).map(option => option.textContent.trim());
 	});
 
-	let newDomains = 0;
-	for (const domain of domains) {
-		const exists = data.some(entry => entry.domain === domain);
-		if (!exists) {
-			data.push({
-				domain: domain,
-				retrievedAt: new Date().toISOString(),
-			});
-			newDomains++;
-		}
-	}
-
-	console.log(`Added ${newDomains} new domains from https://cloudns.net`);
 	await page.close();
-	await fs.writeFile(filePath, JSON.stringify(data, null, 2));
+	return domains.map(domain => ({
+		domain: domain,
+		retrievedAt: new Date().toISOString(),
+	}));
 }
 
 async function scrape(browser) {
-	await loadData();
-	await loginAndScrapeDomains(browser);
+	let data = await loadData(filePath);
+	const newDomains = await loginAndScrapeDomains(browser);
+	const uniqueNewDomains = [...data, ...newDomains.filter(nd => !data.some(d => d.domain === nd.domain))];
+	if (uniqueNewDomains.length > 0) await saveDomains(filePath, uniqueNewDomains);
+	console.log(`Added ${uniqueNewDomains.length} new domains from https://cloudns.net`);
 }
 
 module.exports = { scrape };
