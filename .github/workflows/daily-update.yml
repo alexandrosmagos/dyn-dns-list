@@ -38,10 +38,10 @@ jobs:
           CLOUDDNS_USERNAME: ${{ secrets.CLOUDDNS_USERNAME }}
           CLOUDDNS_PASSWORD: ${{ secrets.CLOUDDNS_PASSWORD }}
 
-      # - name: Commit and push if there are changes
-      #   run: |
-      #     git config --global user.email "action@github.com"
-      #     git config --global user.name "GitHub Action"
-      #     git add -A
-      #     git commit -m "Automatically update .csv and .txt files" || exit 0
-      #     git push https://${{ secrets.ADMIN_GH_TOKEN }}@github.com/${{ github.repository }}.git
+      - name: Commit and push if there are changes
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add -A
+          git commit -m "Automatically update .csv and .txt files" || exit 0
+          git push https://${{ secrets.ADMIN_GH_TOKEN }}@github.com/${{ github.repository }}.git
