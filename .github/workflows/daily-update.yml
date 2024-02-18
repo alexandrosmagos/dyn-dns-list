@@ -1,6 +1,8 @@
 name: Update CSV and TXT Files
 
 on:
+  schedule:
+    - cron: '0 21 * * *'
   workflow_dispatch:
 
 jobs:
