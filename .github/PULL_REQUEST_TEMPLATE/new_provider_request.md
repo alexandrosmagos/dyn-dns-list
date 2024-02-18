@@ -1,3 +1,11 @@
+---
+name: New Provider Request
+about: Request a new provider to be added to the script
+labels: enhancement
+assignees: alexandrosmagos
+
+---
+
 # New Provider Request
 
 ## Provider Information (Required)

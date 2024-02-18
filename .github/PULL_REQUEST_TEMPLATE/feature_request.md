@@ -1,3 +1,11 @@
+---
+name: Feature Request
+about: Request a feature
+labels: enhancement
+assignees: alexandrosmagos
+
+---
+
 # Feature Request
 
 ## Feature Description

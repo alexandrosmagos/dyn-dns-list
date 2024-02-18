@@ -1,3 +1,11 @@
+---
+name: Provider Removal Request
+about: Request provider to be removed to the script
+labels: enhancement
+assignees: alexandrosmagos
+
+---
+
 # Provider Removal Request
 
 ## Provider Information (Required)
