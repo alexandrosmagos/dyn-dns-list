@@ -19,9 +19,7 @@ const csvWriter = createCsvWriter({
 });
 
 async function writeCsv(data) {
-    await csvWriter.writeRecords(data)
-        .then(() => console.log('CSV file written successfully.'))
-        .catch(err => console.error(`Failed to write CSV: ${err}`));
+
 }
 
 async function start() {
@@ -35,12 +33,16 @@ async function start() {
         const rawData = fs.readFileSync(filePath, 'utf-8');
         const data = JSON.parse(rawData);
 
+        console.log(`${provider}: ${data.length} domains before filtering for uniqueness.`);
+
         combinedData.push(...data.map(entry => ({
             domain: entry.domain,
             retrievedAt: entry.retrievedAt,
             provider: provider
         })));
     }
+
+    console.log(`Combined data size before filtering: ${combinedData.length}`);
 
     const uniqueDomains = [...new Set(combinedData.map(entry => entry.domain))];
 
@@ -49,7 +51,9 @@ async function start() {
     console.log(`TXT file written with ${uniqueDomains.length} unique domains.`);
 
     // Write to links.csv
-    await writeCsv(combinedData);
+    await csvWriter.writeRecords(combinedData)
+        .then(() => console.log('CSV file written successfully.'))
+        .catch(err => console.error(`Failed to write CSV: ${err}`));
 }
 
 module.exports = { start };

@@ -1,9 +1,8 @@
 require("dotenv").config();
-const puppeteer = require("puppeteer");
 const path = require("path");
 const { loadData, saveDomains } = require('../scraperUtils');
 
-const filePath = path.join(__dirname, "..", "data", "cloudns.json");
+const filePath = path.join(__dirname, "..", "data", "cloudns.net.json");
 
 async function loginAndScrapeDomains(browser) {
 	const page = await browser.newPage();
@@ -24,8 +23,8 @@ async function loginAndScrapeDomains(browser) {
 	await passwordInput.type(process.env.CLOUDDNS_PASSWORD);
 
 	await passwordInput.focus();
-	await page.keyboard.press("Enter");
-	await page.waitForNavigation();
+	await page.click('xpath/.//*[@id="login2faButton"]');
+	await page.waitForSelector("#dashboard-zones", { timeout: 0 });
 
 	await page.goto("https://www.cloudns.net/ajaxPages.php?action=newzone&show=freeZone");
 

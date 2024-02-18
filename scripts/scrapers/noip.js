@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 const path = require('path');
 const { loadData, saveDomains } = require('../scraperUtils');
 
-const filePath = path.join(__dirname, '..', 'data', 'noip.json');
+const filePath = path.join(__dirname, '..', 'data', 'noip.com.json');
 
 async function fetchAndParseDomains() {
 	try {
@@ -42,7 +42,7 @@ async function scrape() {
 	const uniqueNewDomains = newDomains.filter(nd => !data.some(d => d.domain === nd.domain && d.type === nd.type));
 	if (uniqueNewDomains.length > 0) await saveDomains(filePath, [...data, ...uniqueNewDomains]);
 
-	console.log(`Added ${uniqueNewDomains.length} new domains from https://www.noip.com`);
+	console.log(`Added ${uniqueNewDomains.length} new domains from https://noip.com`);
 }
 
 module.exports = { scrape };

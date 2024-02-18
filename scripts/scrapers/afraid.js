@@ -2,7 +2,7 @@ const cheerio = require('cheerio');
 const path = require('path');
 const { loadData, saveDomains } = require('../scraperUtils');
 
-const filePath = path.join(__dirname, '..', 'data', 'afraid.json');
+const filePath = path.join(__dirname, '..', 'data', 'afraid.org.json');
 
 async function navigatePage(page, url) {
     try {

@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 const path = require('path');
 const { loadData, saveDomains } = require('../scraperUtils');
 
-const filePath = path.join(__dirname, '..', 'data', 'dynu.json');
+const filePath = path.join(__dirname, '..', 'data', 'dynu.com.json');
 
 async function fetchAndParseDomains() {
     try {

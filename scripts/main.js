@@ -4,6 +4,7 @@ const puppeteer = require("puppeteer");
 const path = require("path");
 const { pathToFileURL } = require("url");
 const csv = require("./csv");
+const { updateCounts } = require("./scraperUtils");
 
 async function importScrapers() {
     const scrapersDir = path.join(__dirname, "scrapers");
@@ -44,7 +45,7 @@ async function getChromiumExecutablePath() {
 
     try {
         browser = await puppeteer.launch({
-            headless: "new",
+            headless: false,
             executablePath: executablePath,
             args: ["--window-size=1920,1080"], // Makes the scraping easier as some websites hide elements on smaller screens
         });
@@ -54,6 +55,7 @@ async function getChromiumExecutablePath() {
 
         await Promise.all(scraperPromises);
         await csv.start();
+        await updateCounts();
     } catch (error) {
         console.error("There was an error running the scrapers:", error);
     } finally {

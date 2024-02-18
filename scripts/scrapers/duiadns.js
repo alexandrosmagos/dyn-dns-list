@@ -3,7 +3,7 @@ const cheerio = require("cheerio");
 const path = require("path");
 const { loadData, saveDomains } = require('../scraperUtils');
 
-const filePath = path.join(__dirname, "..", "data", "duiadns.json");
+const filePath = path.join(__dirname, "..", "data", "duiadns.net.json");
 
 async function scrapeOptions() {
 	const response = await fetch("https://www.duiadns.net/register-personal");

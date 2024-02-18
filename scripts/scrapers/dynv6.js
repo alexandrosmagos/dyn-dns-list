@@ -1,8 +1,7 @@
-const puppeteer = require("puppeteer");
 const path = require("path");
 const { loadData, saveDomains } = require('../scraperUtils');
 
-const filePath = path.join(__dirname, "..", "data", "dynv6.json");
+const filePath = path.join(__dirname, "..", "data", "dynv6.com.json");
 
 async function scrapeDomains(browser) {
 	const page = await browser.newPage();

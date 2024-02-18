@@ -2,7 +2,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const { loadData, saveDomains } = require('../scraperUtils');
 
-const filePath = path.join(__dirname, '..', 'data', 'changeip.json');
+const filePath = path.join(__dirname, '..', 'data', 'changeip.com.json');
 
 async function scrapeOptions(browser) {
     const page = await browser.newPage();

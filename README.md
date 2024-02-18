@@ -1,8 +1,8 @@
-> **Notice:** Due to a significant increase in traffic to this repository recently, all domains have been scraped and updated as of today (18/02/2024). We've added an automatic scraper for the Dynu provider and are doing the final touch ups to the daily workflow that runs and updates the links.
+> **Notice:** In response to the recent surge in interest and traffic to this repository, significant efforts have been made to rejuvenate and automate its maintenance. The automation process now ensures that the `links.csv` and `links.txt` files are updated on a daily basis. This is achieved through a GitHub Actions workflow that systematically scrapes dynamic DNS provider websites for the latest domain information, ensuring the repository remains a reliable and up-to-date resource for the community.
 
-**Domains Last Update: 18/02/2024**
+**Domains Last Update: 18/02/2024, 20:05**
 
-# Dynamic DNS domain list (2024) - 30772 domains
+# Dynamic DNS domain list (2024) - 30750 domains
 
 While working on another project, I needed a list of domains being used for dynamic DNS, and since I've lost a few hours of my life, I decided to just release the list. Due to the repository getting some views lately and having some extra time, I decided to automate the scraping part, so that the list remains updated.
 
@@ -57,20 +57,19 @@ For subsequent runs, the script only adds new domains to the list. This ensures 
 
 
 ### DNS Providers included:
-- [afraid.org](https://afraid.org/) (30,163 domains)
-- [dyn.com](https://www.oracle.com/cloud/networking/dns/) (283 domains)
-- [changeip.com](https://www.changeip.com/) (157 domains)
-- [noip.com](https://www.noip.com/) (83 domains)
+- [afraid.org](https://afraid.org/) (30133 domains)
+- [dyn.com](https://dyn.com/) (293 domains)
+- [changeip.com](https://changeip.com/) (157 domains)
+- [noip.com](https://noip.com/) (83 domains) 
 - [now-dns.com](https://now-dns.com/) (32 domains)
-- [dynu.com](https://www.dynu.com) (21 domains)
-- [pubyun.com](https://www.pubyun.com/) (11 domains)
+- [dynu.com](https://dynu.com/) (21 domains)
+- [pubyun.com](https://pubyun.com/) (9 domains)
 - [dynv6.com](https://dynv6.com/) (6 domains)
-- [gslb.me](https://www.gslb.me/) (6 domains)
-- [dnsexit.com](http://dnsexit.com/) (5 domains)
-- [duiadns.net](https://www.duiadns.net/) (3 domains)
-- [cloudns.net](https://www.cloudns.net/) (2 domains)
-- [ydns.io](https://ydns.io/) (2 domains)
-- [duckdns.org](https://www.duckdns.org/) (1 domain)
+- [gslb.me](https://gslb.me/) (5 domains)
+- [dnsexit.com](https://dnsexit.com/) (5 domains)
+- [duiadns.net](https://duiadns.net/) (3 domains)
+- [cloudns.net](https://cloudns.net/) (2 domains)
+- [ydns.io](https://ydns.io/) (1 domains)
 
 Note the above counts are not updated with the new ones.
 They will be automatically be updated in the next commits.

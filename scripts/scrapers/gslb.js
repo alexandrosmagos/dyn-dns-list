@@ -1,9 +1,8 @@
 require("dotenv").config();
-const puppeteer = require("puppeteer");
 const path = require("path");
 const { loadData, saveDomains } = require('../scraperUtils');
 
-const filePath = path.join(__dirname, "..", "data", "gslb.json");
+const filePath = path.join(__dirname, "..", "data", "gslb.me.json");
 
 async function loginAndScrapeDomains(browser) {
 	const page = await browser.newPage();

@@ -3,7 +3,7 @@ const cheerio = require("cheerio");
 const path = require("path");
 const { loadData, saveDomains } = require('../scraperUtils');
 
-const filePath = path.join(__dirname, "..", "data", "pubyun.json");
+const filePath = path.join(__dirname, "..", "data", "pubyun.com.json");
 
 async function scrapeDomains() {
     const response = await fetch("https://www.pubyun.com/products/dyndns/product/");
