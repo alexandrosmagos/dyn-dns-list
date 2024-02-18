@@ -1,24 +1,30 @@
-const puppeteer = require('puppeteer');
-const os = require('os');
-const afraid = require('./scrapers/afraid.js');
-const changeip = require('./scrapers/changeip.js');
-const cloudns = require('./scrapers/cloudns.js');
-const dnsexit = require('./scrapers/dnsexit.js');
-const duiadns = require('./scrapers/duiadns');
-const dyn = require('./scrapers/dyn.js');
-const dynv6 = require('./scrapers/dynv6.js');
-const gslb = require('./scrapers/gslb.js');
-const noip = require('./scrapers/noip.js');
-const nowdns = require('./scrapers/now-dns.js');
-const pubyun = require('./scrapers/pubyun.js');
-const dynu = require('./scrapers/dynu.js');
+const os = require("os");
+const fs = require("fs");
+const puppeteer = require("puppeteer");
+const path = require("path");
+const { pathToFileURL } = require("url");
+const csv = require("./csv");
 
-const csv = require('./csv');
+async function importScrapers() {
+    const scrapersDir = path.join(__dirname, "scrapers");
+    const scraperFiles = fs
+        .readdirSync(scrapersDir)
+        .filter((file) => file.endsWith(".js"));
+
+    const scrapers = [];
+    for (const file of scraperFiles) {
+        const scraperPath = path.join(scrapersDir, file);
+        const fileURL = pathToFileURL(scraperPath); // Convert path to file URL
+        const scraperModule = await import(fileURL.href); // Use the href property of the URL object
+        scrapers.push(scraperModule);
+    }
+    return scrapers;
+}
 
 async function getChromiumExecutablePath() {
     const linuxPaths = [
-        '/usr/bin/chromium-browser', // Common in Ubuntu, Debian
-        '/usr/bin/chromium', // Common in Arch Linux, Fedora
+        "/usr/bin/chromium-browser", // Common in Ubuntu, Debian
+        "/usr/bin/chromium", // Common in Arch Linux, Fedora
     ];
 
     for (const path of linuxPaths) {
@@ -27,47 +33,33 @@ async function getChromiumExecutablePath() {
         }
     }
 
-    throw new Error('Chromium executable not found in expected paths');
+    throw new Error("Chromium executable not found in expected paths");
 }
 
-async function runScrapers() {
+(async () => {
     const startTime = new Date();
     const isLinux = os.platform() === "linux";
-    const path = (isLinux) ? await getChromiumExecutablePath() : undefined;
+    const executablePath = isLinux ? await getChromiumExecutablePath() : undefined;
     let browser;
 
     try {
         browser = await puppeteer.launch({
             headless: "new",
-            executablePath: path,
-            args: ['--window-size=1920,1080'] // Makes the scraping easier as some websites hide elements on smaller screens
+            executablePath: executablePath,
+            args: ["--window-size=1920,1080"], // Makes the scraping easier as some websites hide elements on smaller screens
         });
 
-        const scrapers = [
-            afraid.scrape(browser),
-            cloudns.scrape(browser),
-            changeip.scrape(browser),
-            dynv6.scrape(browser),
-            gslb.scrape(browser),
-            noip.scrape(browser),
-            dynu.scrape(),
-            dnsexit.scrape(),
-            duiadns.scrape(),
-            dyn.scrape(),
-            nowdns.scrape(),
-            pubyun.scrape()
-        ];
+        const scrapers = await importScrapers();
+        const scraperPromises = scrapers.map((scraper) => scraper.scrape(browser));
 
-        await Promise.all(scrapers);
+        await Promise.all(scraperPromises);
         await csv.start();
     } catch (error) {
-        console.error('There was an error running the scrapers:', error);
+        console.error("There was an error running the scrapers:", error);
     } finally {
         await browser.close();
         const endTime = new Date();
         const timeTaken = (endTime - startTime) / (1000 * 60); // Convert milliseconds to minutes
         console.log(`The script took ${timeTaken} minutes to complete.`);
     }
-}
-
-runScrapers();
+})();
