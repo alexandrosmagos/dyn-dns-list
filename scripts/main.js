@@ -45,7 +45,7 @@ async function getChromiumExecutablePath() {
 
     try {
         browser = await puppeteer.launch({
-            headless: false,
+            headless: "new",
             executablePath: executablePath,
             args: ["--window-size=1920,1080"], // Makes the scraping easier as some websites hide elements on smaller screens
         });
