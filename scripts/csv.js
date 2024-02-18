@@ -3,7 +3,7 @@ const path = require('path');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 const dataPath = path.join(__dirname, 'data');
-const csvFilePath = path.join(__dirname, '..', 'links.csv'); // Path for links.csv
+const csvFilePath = path.join(__dirname, '..', 'links.csv');
 
 const files = fs.readdirSync(dataPath).filter(file => file.endsWith('.json'));
 
@@ -45,7 +45,6 @@ async function start() {
             provider: provider
         }));
 
-        // Write to CSV file
         await writeCsv(csvData);
     }
 
