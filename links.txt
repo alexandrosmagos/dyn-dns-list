@@ -31138,6 +31138,8 @@ crafttech.cl
 gddns.nl
 peenet.fi
 lexitra.com
+shrinkinminkin.com
+resourceconquest.com
 dynamic-dns.net
 longmusic.com
 wikaba.com
