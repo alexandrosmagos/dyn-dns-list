@@ -22,6 +22,6 @@
     "csv-writer": "^1.6.0",
     "dotenv": "^16.4.4",
     "node-fetch": "^2.7.0",
-    "puppeteer": "^22.1.0"
+    "puppeteer": "^22.15.0"
   }
 }
