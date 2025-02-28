@@ -30,25 +30,42 @@ async function getChromiumExecutablePath() {
 
     for (const path of linuxPaths) {
         if (fs.existsSync(path)) {
+            console.log(`✅ Found system Chromium at: ${path}`);
             return path;
         }
     }
 
-    throw new Error("Chromium executable not found in expected paths");
+    console.warn("⚠️ No system Chromium found. Using Puppeteer's bundled Chromium.");
+    return null;
 }
 
 (async () => {
+    process.env.PUPPETEER_DEBUG = "1"; // Enable debugging
+
     const startTime = new Date();
     const isLinux = os.platform() === "linux";
     const executablePath = isLinux ? await getChromiumExecutablePath() : undefined;
     let browser;
 
     try {
+        console.log("🚀 Launching Puppeteer...");
+        console.log(`🔹 OS: ${os.platform()}`);
+        console.log(`🔹 Using Chromium path: ${executablePath || "Puppeteer's default"}`);
+
+        const launchArgs = [
+            "--window-size=1920,1080",
+            ...(isLinux ? ["--disable-setuid-sandbox"] : []), // No need for --no-sandbox unless required
+        ];
+
+        console.log(`🔹 Puppeteer launch args: ${launchArgs.join(" ")}`);
+
         browser = await puppeteer.launch({
             headless: "new",
-            executablePath: executablePath,
-            args: ["--window-size=1920,1080"], // Makes the scraping easier as some websites hide elements on smaller screens
+            executablePath: executablePath || undefined, // Use Puppeteer's default if system Chromium is unavailable
+            args: launchArgs,
         });
+
+        console.log("✅ Puppeteer launched successfully!");
 
         const scrapers = await importScrapers();
         const scraperPromises = scrapers.map((scraper) => scraper.scrape(browser));
@@ -57,11 +74,16 @@ async function getChromiumExecutablePath() {
         await csv.start();
         await updateCounts();
     } catch (error) {
-        console.error("There was an error running the scrapers:", error);
+        console.error("❌ Error running the scrapers:", error);
     } finally {
-        await browser.close();
+        if (browser) {
+            console.log("🛑 Closing browser...");
+            await browser.close();
+        } else {
+            console.warn("⚠️ Browser was never launched!");
+        }
         const endTime = new Date();
         const timeTaken = (endTime - startTime) / (1000 * 60);
-        console.log(`The script took ${timeTaken} minutes to complete.`);
+        console.log(`⏳ The script took ${timeTaken.toFixed(2)} minutes to complete.`);
     }
 })();
