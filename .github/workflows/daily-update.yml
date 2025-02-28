@@ -27,7 +27,7 @@ jobs:
         run: |
           cd scripts
           npm ci
-
+          npm install puppeteer --force
       - name: Run main script
         run: |
           cd scripts
