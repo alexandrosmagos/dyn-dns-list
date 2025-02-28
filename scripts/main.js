@@ -31,22 +31,21 @@ async function importScrapers() {
         console.log("🚀 Launching Puppeteer...");
         console.log(`🔹 OS: ${os.platform()}`);
 
+        // Get Puppeteer's default Chromium path
+        const bundledChromiumPath = puppeteer.executablePath();
+        console.log(`✅ Using Puppeteer’s bundled Chromium: ${bundledChromiumPath}`);
+
         const launchArgs = [
             "--window-size=1920,1080",
             "--disable-dev-shm-usage", // Fix crashes in Docker and Linux
-            "--disable-setuid-sandbox", // Needed for non-root execution
+            "--disable-setuid-sandbox", // Required for non-root execution
         ];
 
-        // If on Linux, force Puppeteer's Chromium
-        const browserFetcher = puppeteer.createBrowserFetcher();
-        const revisionInfo = await browserFetcher.download("latest");
-        console.log(`✅ Using Puppeteer’s bundled Chromium: ${revisionInfo.executablePath}`);
-
-        // Final fallback: If system Chromium fails, use --no-sandbox
+        // Try launching Puppeteer with its own Chromium first
         try {
             browser = await puppeteer.launch({
                 headless: "new",
-                executablePath: revisionInfo.executablePath, // Use Puppeteer's Chromium
+                executablePath: bundledChromiumPath, // Use Puppeteer's Chromium
                 args: launchArgs,
             });
         } catch (err) {
@@ -54,7 +53,7 @@ async function importScrapers() {
             launchArgs.push("--no-sandbox"); // Absolute last resort
             browser = await puppeteer.launch({
                 headless: "new",
-                executablePath: revisionInfo.executablePath,
+                executablePath: bundledChromiumPath,
                 args: launchArgs,
             });
         }
