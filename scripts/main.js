@@ -22,48 +22,42 @@ async function importScrapers() {
     return scrapers;
 }
 
-async function getChromiumExecutablePath() {
-    const linuxPaths = [
-        "/usr/bin/chromium-browser", // Common in Ubuntu, Debian
-        "/usr/bin/chromium", // Common in Arch Linux, Fedora
-    ];
-
-    for (const path of linuxPaths) {
-        if (fs.existsSync(path)) {
-            console.log(`✅ Found system Chromium at: ${path}`);
-            return path;
-        }
-    }
-
-    console.warn("⚠️ No system Chromium found. Using Puppeteer's bundled Chromium.");
-    return null;
-}
-
 (async () => {
     process.env.PUPPETEER_DEBUG = "1"; // Enable debugging
-
     const startTime = new Date();
-    const isLinux = os.platform() === "linux";
-    const executablePath = isLinux ? await getChromiumExecutablePath() : undefined;
     let browser;
 
     try {
         console.log("🚀 Launching Puppeteer...");
         console.log(`🔹 OS: ${os.platform()}`);
-        console.log(`🔹 Using Chromium path: ${executablePath || "Puppeteer's default"}`);
 
         const launchArgs = [
             "--window-size=1920,1080",
-            ...(isLinux ? ["--disable-setuid-sandbox"] : []), // No need for --no-sandbox unless required
+            "--disable-dev-shm-usage", // Fix crashes in Docker and Linux
+            "--disable-setuid-sandbox", // Needed for non-root execution
         ];
 
-        console.log(`🔹 Puppeteer launch args: ${launchArgs.join(" ")}`);
+        // If on Linux, force Puppeteer's Chromium
+        const browserFetcher = puppeteer.createBrowserFetcher();
+        const revisionInfo = await browserFetcher.download("latest");
+        console.log(`✅ Using Puppeteer’s bundled Chromium: ${revisionInfo.executablePath}`);
 
-        browser = await puppeteer.launch({
-            headless: "new",
-            executablePath: executablePath || undefined, // Use Puppeteer's default if system Chromium is unavailable
-            args: launchArgs,
-        });
+        // Final fallback: If system Chromium fails, use --no-sandbox
+        try {
+            browser = await puppeteer.launch({
+                headless: "new",
+                executablePath: revisionInfo.executablePath, // Use Puppeteer's Chromium
+                args: launchArgs,
+            });
+        } catch (err) {
+            console.warn("⚠️ Puppeteer failed without sandbox. Retrying with --no-sandbox...");
+            launchArgs.push("--no-sandbox"); // Absolute last resort
+            browser = await puppeteer.launch({
+                headless: "new",
+                executablePath: revisionInfo.executablePath,
+                args: launchArgs,
+            });
+        }
 
         console.log("✅ Puppeteer launched successfully!");
 
