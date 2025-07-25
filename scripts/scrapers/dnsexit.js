@@ -6,7 +6,7 @@ const { loadData, saveDomains } = require('../scraperUtils');
 const filePath = path.join(__dirname, "..", "data", "dnsexit.com.json");
 
 async function scrapeOptions() {
-	const response = await fetch("http://dnsexit.com/domains/free-second-level-domains/");
+	const response = await fetch("https://dnsexit.com/domains/free-second-level-domains/");
 	const body = await response.text();
 	const $ = cheerio.load(body);
 	const options = $("#iddomain > option");
