@@ -4,7 +4,7 @@ const puppeteer = require("puppeteer");
 const path = require("path");
 const { pathToFileURL } = require("url");
 const csv = require("./csv");
-const { updateCounts } = require("./scraperUtils");
+const { updateCounts, retryWithBackoff } = require("./scraperUtils");
 
 async function importScrapers() {
     const scrapersDir = path.join(__dirname, "scrapers");
@@ -33,12 +33,12 @@ async function importScrapers() {
 
         // Get Puppeteer's default Chromium path
         const bundledChromiumPath = puppeteer.executablePath();
-        console.log(`✅ Using Puppeteer’s bundled Chromium: ${bundledChromiumPath}`);
+        console.log(`✅ Using Puppeteer's bundled Chromium: ${bundledChromiumPath}`);
 
         const launchArgs = [
             "--window-size=1920,1080",
             "--disable-dev-shm-usage", // Fix crashes in Docker and Linux
-            "--disable-setuid-sandbox", // Required for non-root execution
+            "--disable-setuid-sandbox" // Required for non-root execution
         ];
 
         // Try launching Puppeteer with its own Chromium first
@@ -61,7 +61,17 @@ async function importScrapers() {
         console.log("✅ Puppeteer launched successfully!");
 
         const scrapers = await importScrapers();
-        const scraperPromises = scrapers.map((scraper) => scraper.scrape(browser));
+        
+        const scraperPromises = scrapers.map(async (scraper) => {
+            try {
+                return await retryWithBackoff(async () => {
+                    return await scraper.scrape(browser);
+                });
+            } catch (error) {
+                console.error(`❌ Scraper failed after all retries:`, error.message);
+                return null;
+            }
+        });
 
         await Promise.all(scraperPromises);
         await csv.start();

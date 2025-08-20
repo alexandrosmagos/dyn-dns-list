@@ -62,4 +62,45 @@ async function updateCounts() {
     }
 }
 
-module.exports = { loadData, saveDomains, updateCounts };
+async function retryWithBackoff(fn, maxRetries = 3, baseDelay = 1000) {
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+            return await fn();
+        } catch (error) {
+            if (attempt === maxRetries) {
+                throw error;
+            }
+
+            const delay = baseDelay * Math.pow(2, attempt - 1);
+            console.log(`⚠️ Attempt ${attempt} failed, retrying in ${delay}ms...`);
+            await new Promise(resolve => setTimeout(resolve, delay));
+        }
+    }
+}
+
+async function fetchWithRetry(url, options = {}, maxRetries = 3) {
+    return retryWithBackoff(async () => {
+        const response = await fetch(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                ...options.headers
+            },
+            timeout: 30000,
+            ...options
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status} for ${url}`);
+        }
+
+        return response;
+    }, maxRetries);
+}
+
+module.exports = {
+    loadData,
+    saveDomains,
+    updateCounts,
+    retryWithBackoff,
+    fetchWithRetry
+};
