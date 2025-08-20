@@ -22,33 +22,43 @@ async function importScrapers() {
     return scrapers;
 }
 
-async function getChromiumExecutablePath() {
-    const linuxPaths = [
-        "/usr/bin/chromium-browser", // Common in Ubuntu, Debian
-        "/usr/bin/chromium", // Common in Arch Linux, Fedora
-    ];
-
-    for (const path of linuxPaths) {
-        if (fs.existsSync(path)) {
-            return path;
-        }
-    }
-
-    throw new Error("Chromium executable not found in expected paths");
-}
-
 (async () => {
+    process.env.PUPPETEER_DEBUG = "1"; // Enable debugging
     const startTime = new Date();
-    const isLinux = os.platform() === "linux";
-    const executablePath = isLinux ? await getChromiumExecutablePath() : undefined;
     let browser;
 
     try {
-        browser = await puppeteer.launch({
-            headless: "new",
-            executablePath: executablePath,
-            args: ["--window-size=1920,1080"], // Makes the scraping easier as some websites hide elements on smaller screens
-        });
+        console.log("🚀 Launching Puppeteer...");
+        console.log(`🔹 OS: ${os.platform()}`);
+
+        // Get Puppeteer's default Chromium path
+        const bundledChromiumPath = puppeteer.executablePath();
+        console.log(`✅ Using Puppeteer’s bundled Chromium: ${bundledChromiumPath}`);
+
+        const launchArgs = [
+            "--window-size=1920,1080",
+            "--disable-dev-shm-usage", // Fix crashes in Docker and Linux
+            "--disable-setuid-sandbox", // Required for non-root execution
+        ];
+
+        // Try launching Puppeteer with its own Chromium first
+        try {
+            browser = await puppeteer.launch({
+                headless: "new",
+                executablePath: bundledChromiumPath, // Use Puppeteer's Chromium
+                args: launchArgs,
+            });
+        } catch (err) {
+            console.warn("⚠️ Puppeteer failed without sandbox. Retrying with --no-sandbox...");
+            launchArgs.push("--no-sandbox"); // Absolute last resort
+            browser = await puppeteer.launch({
+                headless: "new",
+                executablePath: bundledChromiumPath,
+                args: launchArgs,
+            });
+        }
+
+        console.log("✅ Puppeteer launched successfully!");
 
         const scrapers = await importScrapers();
         const scraperPromises = scrapers.map((scraper) => scraper.scrape(browser));
@@ -57,11 +67,16 @@ async function getChromiumExecutablePath() {
         await csv.start();
         await updateCounts();
     } catch (error) {
-        console.error("There was an error running the scrapers:", error);
+        console.error("❌ Error running the scrapers:", error);
     } finally {
-        await browser.close();
+        if (browser) {
+            console.log("🛑 Closing browser...");
+            await browser.close();
+        } else {
+            console.warn("⚠️ Browser was never launched!");
+        }
         const endTime = new Date();
         const timeTaken = (endTime - startTime) / (1000 * 60);
-        console.log(`The script took ${timeTaken} minutes to complete.`);
+        console.log(`⏳ The script took ${timeTaken.toFixed(2)} minutes to complete.`);
     }
 })();

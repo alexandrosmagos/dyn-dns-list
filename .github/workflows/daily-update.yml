@@ -27,7 +27,7 @@ jobs:
         run: |
           cd scripts
           npm ci
-
+          npm install puppeteer --force
       - name: Run main script
         run: |
           cd scripts
@@ -42,8 +42,10 @@ jobs:
 
       - name: Commit and push if there are changes
         run: |
+          git pull
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git add -A
           git commit -m "Automatically update .csv and .txt files" || exit 0
-          git push https://${{ secrets.ADMIN_GH_TOKEN }}@github.com/${{ github.repository }}.git
+          git commit -m "Update daily dyndns" --allow-empty
+          git push
