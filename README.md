@@ -74,6 +74,14 @@ For subsequent runs, the script only adds new domains to the list. This ensures 
 Note the above counts are not updated with the new ones.
 They will be automatically be updated in the next commits.
 
+## 👥 Contributors
+
+Thanks goes to these wonderful people who have contributed to this project:
+
+<a href="https://github.com/alexandrosmagos/dyndns/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=alexandrosmagos/dyndns" />
+</a>
+
 ## Back matter
 
 ### Legal disclaimer
