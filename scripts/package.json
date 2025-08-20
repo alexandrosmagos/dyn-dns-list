@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "While working on another project, I needed a list of domains being used for dynamic DNS, and since I've lost a few hours of my life, I decided to just release the list.",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,10 +21,9 @@
   },
   "homepage": "https://github.com/alexandrosmagos/dyndns#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.12",
+    "cheerio": "^1.1.2",
     "csv-writer": "^1.6.0",
-    "dotenv": "^16.4.4",
-    "node-fetch": "^2.7.0",
-    "puppeteer": "^22.15.0"
+    "dotenv": "^17.2.1",
+    "puppeteer": "^24.16.2"
   }
 }
