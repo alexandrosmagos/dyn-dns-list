@@ -24,6 +24,6 @@
     "cheerio": "^1.1.2",
     "csv-writer": "^1.6.0",
     "dotenv": "^17.2.1",
-    "puppeteer": "^24.16.2"
+    "puppeteer": "^24.17.0"
   }
 }
