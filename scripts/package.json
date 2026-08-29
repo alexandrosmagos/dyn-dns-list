@@ -25,5 +25,8 @@
     "csv-writer": "^1.6.0",
     "dotenv": "^17.2.1",
     "puppeteer": "^24.43.1"
+  },
+  "overrides": {
+    "ip-address": "10.3.1"
   }
 }
