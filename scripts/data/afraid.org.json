@@ -231766,5 +231766,53 @@
     "domain": "wrarc.ca",
     "age": "0 days ago (08/28/2026)",
     "retrievedAt": "2026-08-29T03:02:43.328Z"
+  },
+  {
+    "id": "1475591",
+    "domain": "almafi.ch",
+    "age": "111 days ago (05/10/2026)",
+    "retrievedAt": "2026-08-29T23:00:45.025Z"
+  },
+  {
+    "id": "1480844",
+    "domain": "smartbateria.pl",
+    "age": "7 days ago (08/22/2026)",
+    "retrievedAt": "2026-08-29T23:00:54.948Z"
+  },
+  {
+    "id": "1475953",
+    "domain": "smartmetka.pl",
+    "age": "104 days ago (05/17/2026)",
+    "retrievedAt": "2026-08-29T23:00:54.948Z"
+  },
+  {
+    "id": "1481213",
+    "domain": "robohub.ro",
+    "age": "0 days ago (08/29/2026)",
+    "retrievedAt": "2026-08-29T23:01:00.946Z"
+  },
+  {
+    "id": "1480895",
+    "domain": "smartbateria.eu",
+    "age": "6 days ago (08/23/2026)",
+    "retrievedAt": "2026-08-29T23:01:01.948Z"
+  },
+  {
+    "id": "1472732",
+    "domain": "cyceron.ai",
+    "age": "159 days ago (03/23/2026)",
+    "retrievedAt": "2026-08-29T23:01:02.948Z"
+  },
+  {
+    "id": "1475954",
+    "domain": "smartmetka.eu",
+    "age": "104 days ago (05/17/2026)",
+    "retrievedAt": "2026-08-29T23:01:03.947Z"
+  },
+  {
+    "id": "1480979",
+    "domain": "smartpaszporty.pl",
+    "age": "5 days ago (08/24/2026)",
+    "retrievedAt": "2026-08-29T23:01:03.947Z"
   }
 ]
