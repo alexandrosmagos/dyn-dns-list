@@ -8,9 +8,7 @@ const { updateCounts, retryWithBackoff } = require("./scraperUtils");
 
 async function importScrapers() {
     const scrapersDir = path.join(__dirname, "scrapers");
-    const scraperFiles = fs
-        .readdirSync(scrapersDir)
-        .filter((file) => file.endsWith(".js"));
+    const scraperFiles = fs.readdirSync(scrapersDir).filter(file => file.endsWith(".js"));
 
     const scrapers = [];
     for (const file of scraperFiles) {
@@ -22,6 +20,39 @@ async function importScrapers() {
     return scrapers;
 }
 
+async function launchBrowser() {
+    const executablePath = await puppeteer.executablePath();
+    console.log(`✅ Using Puppeteer's bundled Chrome: ${executablePath}`);
+
+    const args = [
+        "--window-size=1920,1080",
+        "--disable-dev-shm-usage"
+    ];
+
+    // GitHub-hosted Linux runners execute Chrome in an environment where the
+    // sandbox is not usable. Keep sandboxing enabled for normal local runs.
+    if (process.env.GITHUB_ACTIONS === "true") {
+        args.push("--no-sandbox", "--disable-setuid-sandbox");
+    }
+
+    try {
+        return await puppeteer.launch({
+            headless: true,
+            executablePath,
+            args
+        });
+    } catch (error) {
+        if (args.includes("--no-sandbox")) throw error;
+
+        console.warn("⚠️ Chrome failed with sandboxing enabled. Retrying with --no-sandbox...");
+        return puppeteer.launch({
+            headless: true,
+            executablePath,
+            args: [...args, "--no-sandbox", "--disable-setuid-sandbox"]
+        });
+    }
+}
+
 (async () => {
     const startTime = new Date();
     let browser;
@@ -30,44 +61,15 @@ async function importScrapers() {
         console.log("🚀 Launching Puppeteer...");
         console.log(`🔹 OS: ${os.platform()}`);
 
-        // Get Puppeteer's default Chromium path
-        const bundledChromiumPath = puppeteer.executablePath();
-        console.log(`✅ Using Puppeteer's bundled Chromium: ${bundledChromiumPath}`);
-
-        const launchArgs = [
-            "--window-size=1920,1080",
-            "--disable-dev-shm-usage", // Fix crashes in Docker and Linux
-            "--disable-setuid-sandbox" // Required for non-root execution
-        ];
-
-        // Try launching Puppeteer with its own Chromium first
-        try {
-            browser = await puppeteer.launch({
-                headless: true,
-                executablePath: bundledChromiumPath, // Use Puppeteer's Chromium
-                args: launchArgs,
-            });
-        } catch (err) {
-            console.warn("⚠️ Puppeteer failed without sandbox. Retrying with --no-sandbox...");
-            launchArgs.push("--no-sandbox"); // Absolute last resort
-            browser = await puppeteer.launch({
-                headless: true,
-                executablePath: bundledChromiumPath,
-                args: launchArgs,
-            });
-        }
-
+        browser = await launchBrowser();
         console.log("✅ Puppeteer launched successfully!");
 
         const scrapers = await importScrapers();
-        
-        const scraperPromises = scrapers.map(async (scraper) => {
+        const scraperPromises = scrapers.map(async scraper => {
             try {
-                return await retryWithBackoff(async () => {
-                    return await scraper.scrape(browser);
-                });
+                return await retryWithBackoff(() => scraper.scrape(browser));
             } catch (error) {
-                console.error(`❌ Scraper failed after all retries:`, error.message);
+                console.error("❌ Scraper failed after all retries:", error.message);
                 return null;
             }
         });
@@ -77,6 +79,7 @@ async function importScrapers() {
         await updateCounts();
     } catch (error) {
         console.error("❌ Error running the scrapers:", error);
+        process.exitCode = 1;
     } finally {
         if (browser) {
             console.log("🛑 Closing browser...");
@@ -84,6 +87,7 @@ async function importScrapers() {
         } else {
             console.warn("⚠️ Browser was never launched!");
         }
+
         const endTime = new Date();
         const timeTaken = (endTime - startTime) / (1000 * 60);
         console.log(`⏳ The script took ${timeTaken.toFixed(2)} minutes to complete.`);

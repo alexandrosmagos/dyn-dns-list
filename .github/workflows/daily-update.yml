@@ -31,6 +31,10 @@ jobs:
         working-directory: scripts
         run: npm install --no-audit --no-fund
 
+      - name: Install Puppeteer browser
+        working-directory: scripts
+        run: npx puppeteer browsers install chrome
+
       - name: Run tests
         working-directory: scripts
         run: npm test
