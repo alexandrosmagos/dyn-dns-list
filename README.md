@@ -1,6 +1,6 @@
 > **Notice:** In response to the recent surge in interest and traffic to this repository, significant efforts have been made to rejuvenate and automate its maintenance. The automation process now ensures that all supported `links.*` exports are updated on a daily basis. This is achieved through a GitHub Actions workflow that systematically scrapes dynamic DNS provider websites for the latest domain information, ensuring the repository remains a reliable and up-to-date resource for the community.
 
-**Domains Last Update: 2026-08-30 15:58 UTC**
+**Domains Last Update: 2026-08-30 23:06 UTC**
 
 # Dynamic DNS domain list (2026) - 39256 domains
 
