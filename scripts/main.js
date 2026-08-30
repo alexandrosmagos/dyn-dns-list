@@ -23,7 +23,6 @@ async function importScrapers() {
 }
 
 (async () => {
-    process.env.PUPPETEER_DEBUG = "1"; // Enable debugging
     const startTime = new Date();
     let browser;
 
@@ -44,7 +43,7 @@ async function importScrapers() {
         // Try launching Puppeteer with its own Chromium first
         try {
             browser = await puppeteer.launch({
-                headless: "new",
+                headless: true,
                 executablePath: bundledChromiumPath, // Use Puppeteer's Chromium
                 args: launchArgs,
             });
@@ -52,7 +51,7 @@ async function importScrapers() {
             console.warn("⚠️ Puppeteer failed without sandbox. Retrying with --no-sandbox...");
             launchArgs.push("--no-sandbox"); // Absolute last resort
             browser = await puppeteer.launch({
-                headless: "new",
+                headless: true,
                 executablePath: bundledChromiumPath,
                 args: launchArgs,
             });

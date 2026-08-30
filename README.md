@@ -1,8 +1,8 @@
-> **Notice:** In response to the recent surge in interest and traffic to this repository, significant efforts have been made to rejuvenate and automate its maintenance. The automation process now ensures that the `links.csv` and `links.txt` files are updated on a daily basis. This is achieved through a GitHub Actions workflow that systematically scrapes dynamic DNS provider websites for the latest domain information, ensuring the repository remains a reliable and up-to-date resource for the community.
+> **Notice:** In response to the recent surge in interest and traffic to this repository, significant efforts have been made to rejuvenate and automate its maintenance. The automation process now ensures that all supported `links.*` exports are updated on a daily basis. This is achieved through a GitHub Actions workflow that systematically scrapes dynamic DNS provider websites for the latest domain information, ensuring the repository remains a reliable and up-to-date resource for the community.
 
-**Domains Last Update: 29/08/2026, 23:01**
+**Domains Last Update: 2026-08-30 15:40 UTC**
 
-# Dynamic DNS domain list (2025) - 32756 domains
+# Dynamic DNS domain list (2026) - 39253 domains
 
 While working on another project, I needed a list of domains being used for dynamic DNS, and since I've lost a few hours of my life, I decided to just release the list. Due to the repository getting some views lately and having some extra time, I decided to automate the scraping part, so that the list remains updated.
 
@@ -25,21 +25,36 @@ While working on another project, I needed a list of domains being used for dyna
 
 This project is a NodeJS application which is designed to automate the scraping of various dynamic DNS providers to maintain an updated list of domains. The `scripts` folder contains individual scripts for scraping each DNS provider's site. The results of each scraping operation are stored in the `data` folder in JSON format, with each file named after the corresponding DNS provider.
 
-Upon execution of the main script (`main.js`), all the scrapers run concurrently and fetch the latest data from the respective DNS provider websites. Post completion, a consolidated list of all the domains, along with their retrieved date and provider, is generated in both CSV and TXT formats and stored in the root directory of the project.
+Upon execution of the main script (`main.js`), all the scrapers run concurrently and fetch the latest data from the respective DNS provider websites. Post completion, a consolidated list of all the domains, along with their retrieved date and provider, is generated from one normalized, deduplicated domain set and stored in several integration-friendly formats in the project root.
 
 The project uses Puppeteer for scraping websites that either require login or are behind cloudflare, or node fetch for simpler websites, and Cheerio for parsing and extracting information.
 
 If there are any more websites you know that provide Dynamic DNS, please open an issue, and I will automate that too.
 
 
+## Export Formats
+
+All exports are generated from the same lowercase, IDNA-normalized, validated and deduplicated domain set. This keeps counts and content consistent across integrations.
+
+- `links.txt` — one domain per line; simplest generic blocklist format.
+- `links.csv` — RFC 4180-compatible CSV with `Domain`, `RetrievedAt`, and semicolon-separated `Provider` provenance.
+- `links.json` — versioned-style machine-readable object containing generation time, count, and records.
+- `links.jsonl` — one JSON record per line for streaming/big-data pipelines.
+- `links.hosts` — hosts-file format using `0.0.0.0`.
+- `links.dnsmasq` — dnsmasq `server=/domain/` rules.
+- `links.adblock` — Adblock/uBlock-style `||domain^` rules.
+- `links.rpz` — Response Policy Zone data for DNS servers supporting RPZ.
+
+The generator removes blank/malformed values, strips accidental leading/trailing dots, converts Unicode domains to ASCII/Punycode, and merges duplicate domains while retaining all provider provenance.
+
 ## Setup and Running the Project
 
 1. Clone the repository.
 2. Navigate to the `scripts` folder.
-3. Install dependencies by running `npm install`.
+3. Install dependencies by running `npm ci` (Node.js 20.18.1 or newer).
 4. Rename the `.env example` file to `.env` and set up your environment variables.
 5. Run `node main.js` to start the scraping process. A chromium window will pop up and will navigate to cloudns.net, which will automatically enter the login details, and wait 15 seconds for you to complete the captcha. After you finish the captcha, please don't press the login button, as that will disrupt the script.
-6. The output will be JSON files for each provider in the `data` folder, and a `links.csv` file will also be created in the root directory with all the domains, the date they were retrieved, and their provider.
+6. The output will be JSON files for each provider in the `data` folder, and all documented `links.*` exports will be regenerated in the project root.
 
 ## Usage Example
 
@@ -57,16 +72,16 @@ For subsequent runs, the script only adds new domains to the list. This ensures 
 
 
 ### DNS Providers included:
-- [afraid.org](https://afraid.org/) (38636 domains)
-- [dyn.com](https://dyn.com/) (293 domains)
-- [changeip.com](https://changeip.com/) (159 domains)
+- [afraid.org](https://afraid.org/) (38632 domains)
+- [dyn.com](https://dyn.com/) (283 domains)
+- [changeip.com](https://changeip.com/) (158 domains)
 - [noip.com](https://noip.com/) (83 domains) 
 - [now-dns.com](https://now-dns.com/) (32 domains)
-- [dynu.com](https://dynu.com/) (33 domains)
+- [dynu.com](https://dynu.com/) (32 domains)
 - [pubyun.com](https://pubyun.com/) (9 domains)
 - [dynv6.com](https://dynv6.com/) (6 domains)
 - [gslb.me](https://gslb.me/) (5 domains)
-- [dnsexit.com](https://dnsexit.com/) (9 domains)
+- [dnsexit.com](https://dnsexit.com/) (7 domains)
 - [duiadns.net](https://duiadns.net/) (3 domains)
 - [cloudns.net](https://cloudns.net/) (2 domains)
 - [ydns.io](https://ydns.io/) (1 domains)

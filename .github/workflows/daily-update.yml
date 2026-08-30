@@ -1,37 +1,43 @@
-name: Update CSV and TXT Files
+name: Update domain exports
 
 on:
   schedule:
     - cron: '0 21 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+concurrency:
+  group: dyndns-daily-update
+  cancel-in-progress: false
+
 jobs:
   update-files:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 30
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 20
-          cache: 'npm'
-          cache-dependency-path: scripts/package-lock.json
-
-      - name: Change to scripts directory
-        run: cd scripts
+          node-version: 24
+          cache: npm
+          cache-dependency-path: scripts/package.json
 
       - name: Install dependencies
-        run: |
-          cd scripts
-          npm ci
-          npm install puppeteer --force
-      - name: Run main script
-        run: |
-          cd scripts
-          node main.js
+        working-directory: scripts
+        run: npm install --no-audit --no-fund
+
+      - name: Run tests
+        working-directory: scripts
+        run: npm test
+
+      - name: Scrape providers and generate exports
+        working-directory: scripts
+        run: node main.js
         env:
           NOIP_USERNAME: ${{ secrets.NOIP_USERNAME }}
           NOIP_PASSWORD: ${{ secrets.NOIP_PASSWORD }}
@@ -40,12 +46,11 @@ jobs:
           CLOUDDNS_USERNAME: ${{ secrets.CLOUDDNS_USERNAME }}
           CLOUDDNS_PASSWORD: ${{ secrets.CLOUDDNS_PASSWORD }}
 
-      - name: Commit and push if there are changes
+      - name: Commit changes
         run: |
-          git pull
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git add -A
-          git commit -m "Automatically update .csv and .txt files" || exit 0
-          git commit -m "Update daily dyndns" --allow-empty
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add README.md links.* scripts/data
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: update dynamic DNS lists"
           git push

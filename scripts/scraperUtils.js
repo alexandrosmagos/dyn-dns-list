@@ -1,5 +1,6 @@
 const fs = require('fs').promises;
 const path = require('path');
+const { readCanonicalRecords } = require('./csv');
 
 async function loadData(filePath) {
     try {
@@ -21,42 +22,27 @@ async function saveDomains(filePath, data) {
 async function updateCounts() {
     const dataPath = path.join(__dirname, 'data');
     const readmePath = path.join(__dirname, '..', 'README.md');
-    let totalDomains = 0;
-
     try {
-        const files = await fs.readdir(dataPath);
-        const providerCounts = await Promise.all(files.filter(file => file.endsWith('.json')).map(async file => {
-            const filePath = path.join(dataPath, file);
-            const data = await loadData(filePath);
+        const files = (await fs.readdir(dataPath)).filter(file => file.endsWith('.json')).sort();
+        const providerCounts = [];
+        for (const file of files) {
             const provider = file.replace('.json', '');
-            const count = data.length;
-            totalDomains += count;
-            return { provider, count };
-        }));
-
+            const data = await loadData(path.join(dataPath, file));
+            const count = new Set(data.map(entry => require('./csv').normalizeDomain(entry.domain)).filter(Boolean)).size;
+            providerCounts.push({ provider, count });
+        }
+        const { records } = readCanonicalRecords();
         let readmeContent = await fs.readFile(readmePath, 'utf8');
-        providerCounts.forEach(({ provider, count }) => {
-            readmeContent = readmeContent.replace(new RegExp(`- \\[${provider}\\]\\(https://.+\\) \\(\\d+ domains\\)`, 'g'), `- [${provider}](https://${provider}/) (${count} domains)`);
-        });
-
-        // Update total domains count
-        readmeContent = readmeContent.replace(/# Dynamic DNS domain list \(2024\) - \d+ domains/g, `# Dynamic DNS domain list (2024) - ${totalDomains} domains`);
-
-        const currentDateTime = new Date().toLocaleString('en-GB', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            hour12: false
-        });
-
-        // Update "Domains Last Update:" line
-        readmeContent = readmeContent.replace(/\*\*Domains Last Update: .+\*\*/g, `**Domains Last Update: ${currentDateTime}**`);
-
-
+        for (const { provider, count } of providerCounts) {
+            const escaped = provider.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            readmeContent = readmeContent.replace(new RegExp(`(- \\[${escaped}\\]\\([^\\n]+\\) \\()\\d+( domains\\))`, 'g'), `$1${count}$2`);
+        }
+        readmeContent = readmeContent.replace(/# Dynamic DNS domain list \(\d{4}\) - \d+ domains/g, `# Dynamic DNS domain list (${new Date().getUTCFullYear()}) - ${records.length} domains`);
+        const now = new Date();
+        const stamp = now.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
+        readmeContent = readmeContent.replace(/\*\*Domains Last Update: .+\*\*/g, `**Domains Last Update: ${stamp}**`);
         await fs.writeFile(readmePath, readmeContent);
-        console.log('README.md updated with the latest domain counts.');
+        console.log('README.md updated with normalized unique-domain counts.');
     } catch (error) {
         console.error('Error updating counts:', error);
     }
@@ -81,12 +67,12 @@ async function retryWithBackoff(fn, maxRetries = 3, baseDelay = 1000) {
 async function fetchWithRetry(url, options = {}, maxRetries = 3) {
     return retryWithBackoff(async () => {
         const response = await fetch(url, {
+            ...options,
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
                 ...options.headers
             },
-            timeout: 30000,
-            ...options
+            signal: options.signal || AbortSignal.timeout(30000)
         });
 
         if (!response.ok) {
