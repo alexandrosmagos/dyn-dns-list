@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-30T15:52:30.167Z",
-  "count": 39253,
+  "generatedAt": "2026-08-30T15:58:00.714Z",
+  "count": 39256,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -52876,6 +52876,13 @@
     {
       "domain": "copse.de",
       "retrievedAt": "2024-02-18T18:02:37.984Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "copuchando.cl",
+      "retrievedAt": "2026-08-30T15:57:42.594Z",
       "providers": [
         "afraid.org"
       ]
@@ -236262,6 +236269,20 @@
     {
       "domain": "tapclub.com",
       "retrievedAt": "2024-02-18T18:01:46.289Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "taphouse.tv",
+      "retrievedAt": "2026-08-30T15:57:48.599Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "taphousetv.com",
+      "retrievedAt": "2026-08-30T15:57:48.599Z",
       "providers": [
         "afraid.org"
       ]
