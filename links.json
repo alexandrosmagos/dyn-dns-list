@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-30T23:06:34.807Z",
-  "count": 39256,
+  "generatedAt": "2026-09-01T00:21:18.735Z",
+  "count": 39259,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -37476,6 +37476,13 @@
     {
       "domain": "bunkermap.co.uk",
       "retrievedAt": "2026-01-13T21:19:11.519Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "bunkerscorp.com",
+      "retrievedAt": "2026-09-01T00:21:11.891Z",
       "providers": [
         "afraid.org"
       ]
@@ -115349,6 +115356,13 @@
       ]
     },
     {
+      "domain": "infurer.ai",
+      "retrievedAt": "2026-09-01T00:21:13.896Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "infytec.com.ar",
       "retrievedAt": "2024-02-18T18:00:44.854Z",
       "providers": [
@@ -184287,6 +184301,13 @@
     {
       "domain": "pedalpedalpedal.com",
       "retrievedAt": "2024-02-18T18:00:43.840Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "pedersia.ru",
+      "retrievedAt": "2026-09-01T00:21:13.896Z",
       "providers": [
         "afraid.org"
       ]
