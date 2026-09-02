@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-01T22:59:20.534Z",
-  "count": 39263,
+  "generatedAt": "2026-09-02T22:59:56.675Z",
+  "count": 39264,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -127713,6 +127713,13 @@
     {
       "domain": "juyju.com.ar",
       "retrievedAt": "2024-02-18T18:05:28.469Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "jvbleague.com",
+      "retrievedAt": "2026-09-02T22:59:41.914Z",
       "providers": [
         "afraid.org"
       ]
