@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-03T22:59:03.470Z",
-  "count": 39269,
+  "generatedAt": "2026-09-04T22:46:20.754Z",
+  "count": 39271,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -84458,6 +84458,13 @@
       ]
     },
     {
+      "domain": "fenix-soft.ru",
+      "retrievedAt": "2026-09-04T22:46:11.939Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "fenixsi.ar",
       "retrievedAt": "2024-02-18T18:01:54.345Z",
       "providers": [
@@ -115666,6 +115673,13 @@
     {
       "domain": "ink.je",
       "retrievedAt": "2024-02-18T18:02:22.780Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "inkandiron.ca",
+      "retrievedAt": "2026-09-04T22:46:13.942Z",
       "providers": [
         "afraid.org"
       ]
