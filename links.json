@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-04T22:46:20.754Z",
-  "count": 39271,
+  "generatedAt": "2026-09-05T22:37:45.372Z",
+  "count": 39272,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -17715,6 +17715,13 @@
     {
       "domain": "ardan.com.ar",
       "retrievedAt": "2024-02-18T18:04:04.588Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "ardentgroveinvestments.com",
+      "retrievedAt": "2026-09-05T22:37:35.195Z",
       "providers": [
         "afraid.org"
       ]
