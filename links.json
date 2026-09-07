@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-06T22:41:01.990Z",
-  "count": 39274,
+  "generatedAt": "2026-09-07T23:18:04.377Z",
+  "count": 39276,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -155956,6 +155956,13 @@
       ]
     },
     {
+      "domain": "mhibroker.com",
+      "retrievedAt": "2026-09-07T23:17:52.352Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "mhiconsult.com",
       "retrievedAt": "2024-02-18T18:04:22.810Z",
       "providers": [
@@ -194598,6 +194605,13 @@
     {
       "domain": "ptmts.co.id",
       "retrievedAt": "2024-02-18T18:02:17.743Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "ptngi.co.id",
+      "retrievedAt": "2026-09-07T23:17:38.344Z",
       "providers": [
         "afraid.org"
       ]
