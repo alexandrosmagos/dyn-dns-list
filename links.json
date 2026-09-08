@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-07T23:18:04.377Z",
-  "count": 39276,
+  "generatedAt": "2026-09-08T23:09:53.880Z",
+  "count": 39279,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -144042,6 +144042,13 @@
       ]
     },
     {
+      "domain": "loongfans.ru",
+      "retrievedAt": "2026-09-08T23:09:49.730Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "loopas.cl",
       "retrievedAt": "2024-02-18T18:01:13.060Z",
       "providers": [
@@ -154579,6 +154586,13 @@
     {
       "domain": "melissajacobsfam.com",
       "retrievedAt": "2024-02-18T18:05:08.354Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "melissaleger.cl",
+      "retrievedAt": "2026-09-08T23:09:46.727Z",
       "providers": [
         "afraid.org"
       ]
@@ -229136,6 +229150,13 @@
     {
       "domain": "stdlib.eu",
       "retrievedAt": "2024-02-18T18:05:36.160Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "stealer.life",
+      "retrievedAt": "2026-09-08T23:09:49.731Z",
       "providers": [
         "afraid.org"
       ]
