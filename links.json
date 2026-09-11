@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-10T22:56:35.146Z",
-  "count": 39282,
+  "generatedAt": "2026-09-11T22:59:05.624Z",
+  "count": 39287,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -102231,6 +102231,13 @@
       ]
     },
     {
+      "domain": "gyulak.hu",
+      "retrievedAt": "2026-09-11T22:58:55.303Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "gz-associates.com",
       "retrievedAt": "2024-02-18T18:00:47.872Z",
       "providers": [
@@ -190137,6 +190144,13 @@
       ]
     },
     {
+      "domain": "poolstrade.com",
+      "retrievedAt": "2026-09-11T22:59:00.307Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "poopsikin.com",
       "retrievedAt": "2024-02-18T18:03:48.111Z",
       "providers": [
@@ -208444,6 +208458,13 @@
     {
       "domain": "russkoe-steklo.ru",
       "retrievedAt": "2024-02-18T18:01:26.132Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "russuniverse.com",
+      "retrievedAt": "2026-09-11T22:58:53.301Z",
       "providers": [
         "afraid.org"
       ]
@@ -229171,6 +229192,13 @@
     {
       "domain": "stealer.life",
       "retrievedAt": "2026-09-08T23:09:49.731Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "stealingisok.org",
+      "retrievedAt": "2026-09-11T22:58:24.283Z",
       "providers": [
         "afraid.org"
       ]
@@ -257073,6 +257101,13 @@
     {
       "domain": "viah1.com",
       "retrievedAt": "2024-02-18T18:02:50.066Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "viahelper.com",
+      "retrievedAt": "2026-09-11T22:58:56.304Z",
       "providers": [
         "afraid.org"
       ]
