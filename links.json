@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-11T22:59:05.624Z",
-  "count": 39287,
+  "generatedAt": "2026-09-12T22:49:00.912Z",
+  "count": 39291,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -1237,6 +1237,13 @@
     {
       "domain": "226vitech.com",
       "retrievedAt": "2024-02-18T18:00:52.926Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "228628.xyz",
+      "retrievedAt": "2026-09-12T22:48:50.560Z",
       "providers": [
         "afraid.org"
       ]
@@ -37523,6 +37530,13 @@
       ]
     },
     {
+      "domain": "bunkershub.com",
+      "retrievedAt": "2026-09-12T22:48:51.560Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "bunnybrat.moe",
       "retrievedAt": "2025-11-08T21:15:14.110Z",
       "providers": [
@@ -69354,6 +69368,13 @@
     {
       "domain": "drasner.com",
       "retrievedAt": "2024-02-18T18:01:39.185Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "dratify.com",
+      "retrievedAt": "2026-09-12T22:48:51.561Z",
       "providers": [
         "afraid.org"
       ]
@@ -234113,6 +234134,13 @@
     {
       "domain": "swirl.com.my",
       "retrievedAt": "2024-02-18T18:04:35.272Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "swiss-alpine.ro",
+      "retrievedAt": "2026-09-12T22:48:39.553Z",
       "providers": [
         "afraid.org"
       ]
