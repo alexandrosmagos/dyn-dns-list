@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-12T22:49:00.912Z",
-  "count": 39291,
+  "generatedAt": "2026-09-13T22:49:32.548Z",
+  "count": 39294,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -63250,6 +63250,13 @@
     {
       "domain": "derpianist.org",
       "retrievedAt": "2024-02-18T18:04:06.619Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "derpinox.ch",
+      "retrievedAt": "2026-09-13T22:49:22.695Z",
       "providers": [
         "afraid.org"
       ]
@@ -142376,6 +142383,13 @@
       ]
     },
     {
+      "domain": "linux-mirror.de",
+      "retrievedAt": "2026-09-13T22:49:28.697Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "linux-one.org",
       "retrievedAt": "2024-02-18T18:01:42.271Z",
       "providers": [
@@ -187787,6 +187801,13 @@
     {
       "domain": "pipestreamtech.com",
       "retrievedAt": "2024-02-18T18:01:48.321Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "pipestrip.com",
+      "retrievedAt": "2026-09-13T22:48:37.050Z",
       "providers": [
         "afraid.org"
       ]
