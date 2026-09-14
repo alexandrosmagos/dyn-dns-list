@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-13T22:49:32.548Z",
-  "count": 39294,
+  "generatedAt": "2026-09-14T23:43:27.255Z",
+  "count": 39295,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -110899,6 +110899,13 @@
     {
       "domain": "hydros.cl",
       "retrievedAt": "2026-01-13T21:19:28.558Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "hyfabi.xyz",
+      "retrievedAt": "2026-09-14T23:43:22.015Z",
       "providers": [
         "afraid.org"
       ]
