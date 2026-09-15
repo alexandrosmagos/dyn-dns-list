@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-14T23:43:27.255Z",
-  "count": 39295,
+  "generatedAt": "2026-09-15T23:24:35.145Z",
+  "count": 39296,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -227043,6 +227043,13 @@
     {
       "domain": "spidermaus.de",
       "retrievedAt": "2024-02-18T18:00:52.927Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "spikalab.com",
+      "retrievedAt": "2026-09-15T23:24:30.968Z",
       "providers": [
         "afraid.org"
       ]
