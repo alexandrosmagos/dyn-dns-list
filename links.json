@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-17T23:22:11.415Z",
-  "count": 39300,
+  "generatedAt": "2026-09-18T23:01:27.975Z",
+  "count": 39305,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -35187,6 +35187,13 @@
     {
       "domain": "brancolabs.com",
       "retrievedAt": "2024-02-18T18:02:36.986Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "brandao.net.br",
+      "retrievedAt": "2026-09-18T23:01:07.751Z",
       "providers": [
         "afraid.org"
       ]
@@ -114355,6 +114362,13 @@
       ]
     },
     {
+      "domain": "inakazu.ca",
+      "retrievedAt": "2026-09-18T22:58:29.646Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "inaltue.cl",
       "retrievedAt": "2024-09-03T21:15:52.932Z",
       "providers": [
@@ -117920,6 +117934,13 @@
     {
       "domain": "ipd.su",
       "retrievedAt": "2024-02-18T18:02:40.996Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "ipdz.com",
+      "retrievedAt": "2026-09-18T23:01:22.855Z",
       "providers": [
         "afraid.org"
       ]
@@ -267886,6 +267907,13 @@
       ]
     },
     {
+      "domain": "xcel.ch",
+      "retrievedAt": "2026-09-18T23:01:17.757Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "xchangegate.net",
       "retrievedAt": "2024-02-18T18:05:11.435Z",
       "providers": [
@@ -271934,6 +271962,13 @@
     {
       "domain": "yrims.com",
       "retrievedAt": "2024-02-18T18:01:57.578Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "yrpeace.org",
+      "retrievedAt": "2026-09-18T23:01:10.753Z",
       "providers": [
         "afraid.org"
       ]
