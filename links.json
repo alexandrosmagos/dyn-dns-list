@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-18T23:01:27.975Z",
-  "count": 39305,
+  "generatedAt": "2026-09-19T22:40:12.493Z",
+  "count": 39306,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -74618,6 +74618,13 @@
     {
       "domain": "eiresol.com",
       "retrievedAt": "2024-02-18T18:00:28.155Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "eiseie-planen.com",
+      "retrievedAt": "2026-09-19T22:39:58.616Z",
       "providers": [
         "afraid.org"
       ]
