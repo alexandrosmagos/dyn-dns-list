@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-21T23:49:33.608Z",
-  "count": 39306,
+  "generatedAt": "2026-09-22T23:28:37.172Z",
+  "count": 39308,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -83242,6 +83242,13 @@
     {
       "domain": "fandiingah.com",
       "retrievedAt": "2024-02-18T18:00:41.826Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "fandomhousepress.com",
+      "retrievedAt": "2026-09-22T23:28:24.515Z",
       "providers": [
         "afraid.org"
       ]
@@ -170112,6 +170119,13 @@
     {
       "domain": "nexesuniversal.com",
       "retrievedAt": "2026-01-13T21:19:33.569Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "nexiapy.com",
+      "retrievedAt": "2026-09-22T23:28:17.961Z",
       "providers": [
         "afraid.org"
       ]
