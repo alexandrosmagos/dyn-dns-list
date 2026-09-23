@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-22T23:28:37.172Z",
-  "count": 39308,
+  "generatedAt": "2026-09-23T23:27:12.877Z",
+  "count": 39313,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -61395,6 +61395,13 @@
     {
       "domain": "debentureauction.com",
       "retrievedAt": "2024-02-18T18:02:20.776Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "debitarecos.ro",
+      "retrievedAt": "2026-09-23T23:26:30.271Z",
       "providers": [
         "afraid.org"
       ]
@@ -188317,6 +188324,13 @@
       ]
     },
     {
+      "domain": "pjmdpbatan.ar",
+      "retrievedAt": "2026-09-23T23:27:06.292Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "pjsfeed.com",
       "retrievedAt": "2026-01-13T21:19:19.526Z",
       "providers": [
@@ -225123,6 +225137,13 @@
       ]
     },
     {
+      "domain": "solucionescg.cl",
+      "retrievedAt": "2026-09-23T23:26:55.287Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "solucionesjry.com.ar",
       "retrievedAt": "2024-02-18T18:01:22.105Z",
       "providers": [
@@ -233831,6 +233852,13 @@
       ]
     },
     {
+      "domain": "sw-metallwerkstatt.ch",
+      "retrievedAt": "2026-09-23T23:27:08.292Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "sw404.wtf",
       "retrievedAt": "2024-02-18T18:03:49.186Z",
       "providers": [
@@ -234414,6 +234442,13 @@
     {
       "domain": "swtping.org",
       "retrievedAt": "2024-02-18T18:03:36.748Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "swuethrich-metallwerkstatt.ch",
+      "retrievedAt": "2026-09-23T23:27:09.100Z",
       "providers": [
         "afraid.org"
       ]
