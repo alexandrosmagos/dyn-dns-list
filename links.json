@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-26T23:22:19.116Z",
-  "count": 39316,
+  "generatedAt": "2026-09-27T23:35:22.064Z",
+  "count": 39317,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -224985,6 +224985,13 @@
     {
       "domain": "solicituddemateriales.cl",
       "retrievedAt": "2025-10-16T21:16:05.426Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "solidaritysafaris.com",
+      "retrievedAt": "2026-09-27T23:35:07.787Z",
       "providers": [
         "afraid.org"
       ]
