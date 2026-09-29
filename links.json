@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-27T23:35:22.064Z",
-  "count": 39317,
+  "generatedAt": "2026-09-29T00:50:08.646Z",
+  "count": 39319,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -31372,6 +31372,13 @@
     {
       "domain": "bittermail.com",
       "retrievedAt": "2024-02-18T18:03:40.767Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "bitwaive.com",
+      "retrievedAt": "2026-09-29T00:49:56.476Z",
       "providers": [
         "afraid.org"
       ]
@@ -256443,6 +256450,13 @@
     {
       "domain": "velocitytrans.cl",
       "retrievedAt": "2026-01-13T21:18:53.506Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "velofolio.fr",
+      "retrievedAt": "2026-09-29T00:50:05.481Z",
       "providers": [
         "afraid.org"
       ]
