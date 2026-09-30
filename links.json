@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-29T00:50:08.646Z",
-  "count": 39319,
+  "generatedAt": "2026-09-30T00:04:45.815Z",
+  "count": 39322,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -11919,6 +11919,13 @@
     {
       "domain": "alltagshilfe-lichtblicke.com",
       "retrievedAt": "2026-01-13T21:19:09.518Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "allteams.pro",
+      "retrievedAt": "2026-09-30T00:04:28.646Z",
       "providers": [
         "afraid.org"
       ]
@@ -37350,6 +37357,13 @@
     {
       "domain": "bulach.org.uk",
       "retrievedAt": "2024-02-18T18:02:55.100Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "bulkbattery.cl",
+      "retrievedAt": "2026-09-30T00:04:25.642Z",
       "providers": [
         "afraid.org"
       ]
@@ -66015,6 +66029,13 @@
     {
       "domain": "directmagnets.com.au",
       "retrievedAt": "2024-02-18T18:02:59.016Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "directnode.xyz",
+      "retrievedAt": "2026-09-30T00:04:41.648Z",
       "providers": [
         "afraid.org"
       ]
