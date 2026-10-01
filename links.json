@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-30T00:04:45.815Z",
-  "count": 39322,
+  "generatedAt": "2026-10-01T00:21:44.414Z",
+  "count": 39323,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -140341,6 +140341,13 @@
     {
       "domain": "leodealmagro.com.ar",
       "retrievedAt": "2024-02-18T18:02:16.744Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "leofi.org",
+      "retrievedAt": "2026-10-01T00:21:34.745Z",
       "providers": [
         "afraid.org"
       ]
