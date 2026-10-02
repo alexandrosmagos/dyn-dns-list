@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T00:21:44.414Z",
-  "count": 39323,
+  "generatedAt": "2026-10-02T00:28:15.538Z",
+  "count": 39325,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -143958,6 +143958,13 @@
       ]
     },
     {
+      "domain": "lomaene.com",
+      "retrievedAt": "2026-10-02T00:27:32.291Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "lomasturismo.tur.ar",
       "retrievedAt": "2024-02-18T18:03:06.462Z",
       "providers": [
@@ -219322,6 +219329,13 @@
     {
       "domain": "shundertmark.de",
       "retrievedAt": "2024-02-18T18:02:17.750Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "shupilka.cl",
+      "retrievedAt": "2026-10-02T00:28:11.314Z",
       "providers": [
         "afraid.org"
       ]
