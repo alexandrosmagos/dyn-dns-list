@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T00:28:15.538Z",
-  "count": 39325,
+  "generatedAt": "2026-10-03T00:09:05.721Z",
+  "count": 39329,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -148984,6 +148984,13 @@
       ]
     },
     {
+      "domain": "mannzur.xyz",
+      "retrievedAt": "2026-10-03T00:08:56.461Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "manoahinvest.com",
       "retrievedAt": "2024-02-18T18:00:34.794Z",
       "providers": [
@@ -213790,6 +213797,13 @@
       ]
     },
     {
+      "domain": "scissorshome.com",
+      "retrievedAt": "2026-10-03T00:08:51.450Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "scissortailtypewrite.com",
       "retrievedAt": "2024-02-18T18:05:18.020Z",
       "providers": [
@@ -259535,6 +259549,13 @@
       ]
     },
     {
+      "domain": "vndiy.net",
+      "retrievedAt": "2026-10-03T00:09:01.451Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "vndl.com",
       "retrievedAt": "2024-02-18T18:02:34.954Z",
       "providers": [
@@ -260419,6 +260440,13 @@
     {
       "domain": "vrhpolje.si",
       "retrievedAt": "2024-02-18T18:00:54.946Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "vrhtrenerke.com",
+      "retrievedAt": "2026-10-03T00:08:52.449Z",
       "providers": [
         "afraid.org"
       ]
