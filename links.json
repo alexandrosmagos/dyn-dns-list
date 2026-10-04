@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-03T23:31:17.256Z",
-  "count": 39329,
+  "generatedAt": "2026-10-04T23:49:18.117Z",
+  "count": 39336,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -69590,6 +69590,13 @@
       ]
     },
     {
+      "domain": "dreamspacearchitects.in",
+      "retrievedAt": "2026-10-04T23:46:59.464Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "dreamtime.fi",
       "retrievedAt": "2026-01-13T21:19:25.554Z",
       "providers": [
@@ -127909,6 +127916,13 @@
     {
       "domain": "jvbleague.com",
       "retrievedAt": "2026-09-02T22:59:41.914Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "jvekeren.nl",
+      "retrievedAt": "2026-10-04T23:49:00.519Z",
       "providers": [
         "afraid.org"
       ]
@@ -187771,6 +187785,13 @@
       ]
     },
     {
+      "domain": "pindol.eu",
+      "retrievedAt": "2026-10-04T23:49:10.522Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "pineriversps.com.au",
       "retrievedAt": "2024-02-18T18:03:11.497Z",
       "providers": [
@@ -195291,6 +195312,13 @@
     {
       "domain": "pupit.xyz",
       "retrievedAt": "2026-01-13T21:19:20.524Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "pupofil.pl",
+      "retrievedAt": "2026-10-04T23:49:10.522Z",
       "providers": [
         "afraid.org"
       ]
@@ -215680,6 +215708,13 @@
       ]
     },
     {
+      "domain": "sementsul.net",
+      "retrievedAt": "2026-10-04T23:48:42.509Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "semenyih.com.my",
       "retrievedAt": "2024-02-18T18:01:31.140Z",
       "providers": [
@@ -224829,6 +224864,13 @@
       ]
     },
     {
+      "domain": "sokajsok.pl",
+      "retrievedAt": "2026-10-04T23:49:10.523Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "sokhan.ai",
       "retrievedAt": "2024-02-18T18:01:25.108Z",
       "providers": [
@@ -227897,6 +227939,13 @@
     {
       "domain": "sptformatble2014.co.uk",
       "retrievedAt": "2026-01-13T21:18:44.503Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "spurchlaczek.pl",
+      "retrievedAt": "2026-10-04T23:49:10.523Z",
       "providers": [
         "afraid.org"
       ]
