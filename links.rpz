@@ -135,6 +135,7 @@ $TTL 60
 1fk.in. CNAME .
 1glr.co.uk. CNAME .
 1haoyule666.com. CNAME .
+1hrmarriage.com. CNAME .
 1j7a9k.ro. CNAME .
 1logistics.co.uk. CNAME .
 1mac1933.net. CNAME .
@@ -6997,6 +6998,10 @@ cmhipokrates.pl. CNAME .
 cmicsalud.com.ar. CNAME .
 cmiranda.ar. CNAME .
 cmm.com.ve. CNAME .
+cmmcco.com. CNAME .
+cmmccrm.com. CNAME .
+cmmcdoc.com. CNAME .
+cmmcdox.com. CNAME .
 cmnc.org.au. CNAME .
 cmogaming.com. CNAME .
 cmokep.one.pl. CNAME .
@@ -7305,6 +7310,7 @@ component-crm.com. CNAME .
 componentchat.com. CNAME .
 componentcrm.com. CNAME .
 components-online.eu. CNAME .
+componentscrm.com. CNAME .
 componentsearch.com. CNAME .
 componentsearch.net. CNAME .
 componentsearch.us. CNAME .
@@ -11688,6 +11694,7 @@ expomode.net. CNAME .
 exponent.pt. CNAME .
 exponentuptime.com. CNAME .
 exportaciones-sur.com. CNAME .
+exportcalc.com. CNAME .
 exposedus.com. CNAME .
 exposurebench.com. CNAME .
 expoyer-net.com.ar. CNAME .
@@ -21523,6 +21530,7 @@ marowski.pl. CNAME .
 marqenhotels.com. CNAME .
 marrawudi.net. CNAME .
 marrfamily.ca. CNAME .
+marriagegorilla.com. CNAME .
 marriancho.com. CNAME .
 marriottpg.net.ve. CNAME .
 marriottve.com. CNAME .
@@ -28067,6 +28075,7 @@ qtech.cl. CNAME .
 qth.fi. CNAME .
 qthome.org. CNAME .
 qts-ar.com.ar. CNAME .
+qts.ar. CNAME .
 quackly.xyz. CNAME .
 quackquackpond.com. CNAME .
 quadalkatreszek.sk. CNAME .
@@ -32783,6 +32792,7 @@ stcmeurope.com. CNAME .
 stdavidswelland.org. CNAME .
 stdelta.com. CNAME .
 stdlib.eu. CNAME .
+steadfaste.com. CNAME .
 stealer.life. CNAME .
 stealingisok.org. CNAME .
 stealthnet.it. CNAME .

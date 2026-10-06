@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-04T23:49:18.117Z",
-  "count": 39336,
+  "generatedAt": "2026-10-06T01:41:28.478Z",
+  "count": 39346,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -936,6 +936,13 @@
     {
       "domain": "1haoyule666.com",
       "retrievedAt": "2025-08-01T21:08:54.342Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "1hrmarriage.com",
+      "retrievedAt": "2026-10-06T01:41:21.317Z",
       "providers": [
         "afraid.org"
       ]
@@ -48975,6 +48982,34 @@
       ]
     },
     {
+      "domain": "cmmcco.com",
+      "retrievedAt": "2026-10-06T01:41:23.319Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "cmmccrm.com",
+      "retrievedAt": "2026-10-06T01:41:23.319Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "cmmcdoc.com",
+      "retrievedAt": "2026-10-06T01:41:23.319Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "cmmcdox.com",
+      "retrievedAt": "2026-10-06T01:41:23.319Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "cmnc.org.au",
       "retrievedAt": "2024-02-18T18:01:19.088Z",
       "providers": [
@@ -51126,6 +51161,13 @@
     {
       "domain": "components-online.eu",
       "retrievedAt": "2024-02-18T18:03:53.503Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "componentscrm.com",
+      "retrievedAt": "2026-10-06T01:40:48.293Z",
       "providers": [
         "afraid.org"
       ]
@@ -81807,6 +81849,13 @@
     {
       "domain": "exportaciones-sur.com",
       "retrievedAt": "2024-02-18T18:03:27.282Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "exportcalc.com",
+      "retrievedAt": "2026-10-06T01:41:13.310Z",
       "providers": [
         "afraid.org"
       ]
@@ -150657,6 +150706,13 @@
       ]
     },
     {
+      "domain": "marriagegorilla.com",
+      "retrievedAt": "2026-10-06T01:41:14.312Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "marriancho.com",
       "retrievedAt": "2024-02-18T18:01:09.027Z",
       "providers": [
@@ -196465,6 +196521,13 @@
       ]
     },
     {
+      "domain": "qts.ar",
+      "retrievedAt": "2026-10-06T01:41:12.309Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "quackly.xyz",
       "retrievedAt": "2026-01-13T21:19:20.524Z",
       "providers": [
@@ -229472,6 +229535,13 @@
     {
       "domain": "stdlib.eu",
       "retrievedAt": "2024-02-18T18:05:36.160Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "steadfaste.com",
+      "retrievedAt": "2026-10-06T01:41:05.305Z",
       "providers": [
         "afraid.org"
       ]
