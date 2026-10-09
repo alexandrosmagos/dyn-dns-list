@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-08T00:42:51.602Z",
-  "count": 39352,
+  "generatedAt": "2026-10-09T00:58:45.252Z",
+  "count": 39354,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -97100,6 +97100,13 @@
       ]
     },
     {
+      "domain": "glxnk.com",
+      "retrievedAt": "2026-10-09T00:58:24.699Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "glycel.tw",
       "retrievedAt": "2024-02-18T18:04:50.881Z",
       "providers": [
@@ -101449,6 +101456,13 @@
     {
       "domain": "guard.net.ru",
       "retrievedAt": "2024-02-18T18:01:39.186Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "guardandempower.com",
+      "retrievedAt": "2026-10-09T00:58:24.700Z",
       "providers": [
         "afraid.org"
       ]
