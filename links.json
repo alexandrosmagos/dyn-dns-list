@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-11T00:06:46.423Z",
-  "count": 39354,
+  "generatedAt": "2026-10-12T00:11:52.766Z",
+  "count": 39355,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -171925,6 +171925,13 @@
     {
       "domain": "nirosts.ro",
       "retrievedAt": "2024-02-18T18:05:29.498Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "nis3.ro",
+      "retrievedAt": "2026-10-12T00:11:44.650Z",
       "providers": [
         "afraid.org"
       ]
