@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-14T00:06:50.048Z",
-  "count": 39356,
+  "generatedAt": "2026-10-14T23:38:53.790Z",
+  "count": 39361,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -41275,6 +41275,13 @@
       ]
     },
     {
+      "domain": "casajosi.nl",
+      "retrievedAt": "2026-10-14T23:38:46.558Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "casalbuono.com.br",
       "retrievedAt": "2026-01-13T21:19:28.556Z",
       "providers": [
@@ -41389,6 +41396,13 @@
     {
       "domain": "casasintorrox.com",
       "retrievedAt": "2026-01-13T21:19:11.520Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "casaskrater.cl",
+      "retrievedAt": "2026-10-14T23:38:29.544Z",
       "providers": [
         "afraid.org"
       ]
@@ -100600,6 +100614,13 @@
       ]
     },
     {
+      "domain": "grouleffmedlcal.com",
+      "retrievedAt": "2026-10-14T23:38:45.554Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "groundfloorsolutions.co.uk",
       "retrievedAt": "2026-01-08T21:25:17.288Z",
       "providers": [
@@ -128210,6 +128231,13 @@
     {
       "domain": "k2iwr.net",
       "retrievedAt": "2024-02-18T18:04:42.654Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "k35h4.ru",
+      "retrievedAt": "2026-10-14T23:38:27.542Z",
       "providers": [
         "afraid.org"
       ]
@@ -206351,6 +206379,13 @@
     {
       "domain": "rolitas.com.mx",
       "retrievedAt": "2025-07-31T21:08:50.995Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "rollerhockey.ar",
+      "retrievedAt": "2026-10-14T23:38:43.559Z",
       "providers": [
         "afraid.org"
       ]
