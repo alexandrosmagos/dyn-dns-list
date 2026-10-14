@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-13T02:24:06.271Z",
-  "count": 39355,
+  "generatedAt": "2026-10-14T00:06:50.048Z",
+  "count": 39356,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -264171,6 +264171,13 @@
     {
       "domain": "wheller.co.uk",
       "retrievedAt": "2024-02-18T18:03:18.864Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "whenagentsrule.org",
+      "retrievedAt": "2026-10-14T00:05:07.971Z",
       "providers": [
         "afraid.org"
       ]
