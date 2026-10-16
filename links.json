@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-15T23:33:04.573Z",
-  "count": 39362,
+  "generatedAt": "2026-10-16T23:15:25.602Z",
+  "count": 39365,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -127137,6 +127137,13 @@
       ]
     },
     {
+      "domain": "jstreetplants.com",
+      "retrievedAt": "2026-10-16T23:15:07.861Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "jstructure.com",
       "retrievedAt": "2024-02-18T18:02:30.939Z",
       "providers": [
@@ -132186,6 +132193,13 @@
     {
       "domain": "kingpine.org",
       "retrievedAt": "2024-02-18T18:01:51.235Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "kingprawn.space",
+      "retrievedAt": "2026-10-16T23:15:14.863Z",
       "providers": [
         "afraid.org"
       ]
@@ -179513,6 +179527,13 @@
     {
       "domain": "originaltechguru.com",
       "retrievedAt": "2024-02-18T18:03:33.741Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "origintea.ru",
+      "retrievedAt": "2026-10-16T23:15:08.861Z",
       "providers": [
         "afraid.org"
       ]
