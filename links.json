@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T22:52:14.680Z",
-  "count": 39368,
+  "generatedAt": "2026-10-18T22:45:29.885Z",
+  "count": 39371,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -65861,6 +65861,13 @@
     {
       "domain": "dingshunseenkoon.com",
       "retrievedAt": "2024-02-18T18:01:07.018Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "dingushead.com",
+      "retrievedAt": "2026-10-18T22:45:16.497Z",
       "providers": [
         "afraid.org"
       ]
@@ -141284,6 +141291,13 @@
       ]
     },
     {
+      "domain": "liamsworld.net",
+      "retrievedAt": "2026-10-18T22:45:20.498Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "liamtopia.nl",
       "retrievedAt": "2024-02-18T18:05:23.037Z",
       "providers": [
@@ -148657,6 +148671,13 @@
     {
       "domain": "mamadigital.org.mx",
       "retrievedAt": "2024-02-18T18:04:32.242Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "mamaentrena.com",
+      "retrievedAt": "2026-10-18T22:45:25.500Z",
       "providers": [
         "afraid.org"
       ]
