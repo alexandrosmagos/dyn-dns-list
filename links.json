@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-20T00:06:32.264Z",
-  "count": 39375,
+  "generatedAt": "2026-10-20T23:38:02.238Z",
+  "count": 39379,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -7145,6 +7145,13 @@
     {
       "domain": "admiralx.ru",
       "retrievedAt": "2026-01-13T21:19:09.517Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "admium.co",
+      "retrievedAt": "2026-10-20T23:37:57.491Z",
       "providers": [
         "afraid.org"
       ]
@@ -104975,6 +104982,13 @@
       ]
     },
     {
+      "domain": "hdm1.net",
+      "retrievedAt": "2026-10-20T23:37:56.491Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "hdmusicvideo.ro",
       "retrievedAt": "2024-02-18T18:01:03.993Z",
       "providers": [
@@ -193098,6 +193112,13 @@
       ]
     },
     {
+      "domain": "proasist.cl",
+      "retrievedAt": "2026-10-20T23:37:55.484Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "proaud.com",
       "retrievedAt": "2024-02-18T18:04:34.224Z",
       "providers": [
@@ -270597,6 +270618,13 @@
     {
       "domain": "xyfyx.com",
       "retrievedAt": "2024-02-18T18:05:20.026Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "xyloraeducation.org",
+      "retrievedAt": "2026-10-20T23:37:48.480Z",
       "providers": [
         "afraid.org"
       ]
