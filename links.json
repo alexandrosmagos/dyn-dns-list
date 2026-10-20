@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-18T22:45:29.885Z",
-  "count": 39371,
+  "generatedAt": "2026-10-20T00:06:32.264Z",
+  "count": 39375,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -10785,6 +10785,13 @@
     {
       "domain": "alewoh.com",
       "retrievedAt": "2024-02-18T18:05:04.367Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "alex-boi.com",
+      "retrievedAt": "2026-10-20T00:06:26.104Z",
       "providers": [
         "afraid.org"
       ]
@@ -74371,6 +74378,13 @@
       ]
     },
     {
+      "domain": "egaluri.ro",
+      "retrievedAt": "2026-10-20T00:06:25.101Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "egatemessaging.com",
       "retrievedAt": "2024-02-18T18:01:35.157Z",
       "providers": [
@@ -97046,6 +97060,13 @@
     {
       "domain": "gloriousgeeks.com",
       "retrievedAt": "2026-01-13T21:18:19.484Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "glorpsh.it",
+      "retrievedAt": "2026-10-20T00:06:16.095Z",
       "providers": [
         "afraid.org"
       ]
@@ -134643,6 +134664,13 @@
     {
       "domain": "kplusconcepts.com",
       "retrievedAt": "2024-02-18T18:02:42.011Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "kpores.ru",
+      "retrievedAt": "2026-10-20T00:06:16.096Z",
       "providers": [
         "afraid.org"
       ]
