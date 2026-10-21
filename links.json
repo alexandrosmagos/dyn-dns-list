@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-20T23:38:02.238Z",
-  "count": 39379,
+  "generatedAt": "2026-10-21T23:56:44.294Z",
+  "count": 39380,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -39919,6 +39919,13 @@
     {
       "domain": "campeonatosmunicipalesmostoles.org",
       "retrievedAt": "2026-01-13T21:18:35.493Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "camper-hub.eu",
+      "retrievedAt": "2026-10-21T23:55:56.649Z",
       "providers": [
         "afraid.org"
       ]
