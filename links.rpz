@@ -52,6 +52,7 @@ $TTL 60
 1-0.org.tr. CNAME .
 1-3-3-7.de. CNAME .
 1-cl.com. CNAME .
+100-p.ru. CNAME .
 100003.xyz. CNAME .
 1000doors.com. CNAME .
 1000pizzas.com. CNAME .
@@ -1832,6 +1833,7 @@ altnix.in. CNAME .
 alto-el-juego.com.ar. CNAME .
 alto-strat.info. CNAME .
 altoeljuego.ar. CNAME .
+altolospilos.cl. CNAME .
 altonplaza.xyz. CNAME .
 altoprecision.com. CNAME .
 altosdeldorado.com.ar. CNAME .
@@ -10960,6 +10962,7 @@ emeraldtan.com. CNAME .
 emersonbrookforest.org. CNAME .
 emetron.ru. CNAME .
 emets.su. CNAME .
+emicdata.cl. CNAME .
 emicdata.com. CNAME .
 emili.com. CNAME .
 emilianopoblete.com.ar. CNAME .

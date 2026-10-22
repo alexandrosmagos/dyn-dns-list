@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-21T23:56:44.294Z",
-  "count": 39380,
+  "generatedAt": "2026-10-22T23:52:02.947Z",
+  "count": 39383,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -355,6 +355,13 @@
     {
       "domain": "1-cl.com",
       "retrievedAt": "2024-02-18T18:03:38.769Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "100-p.ru",
+      "retrievedAt": "2026-10-22T23:51:57.754Z",
       "providers": [
         "afraid.org"
       ]
@@ -12815,6 +12822,13 @@
     {
       "domain": "altoeljuego.ar",
       "retrievedAt": "2024-02-18T18:03:51.211Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "altolospilos.cl",
+      "retrievedAt": "2026-10-22T23:51:23.734Z",
       "providers": [
         "afraid.org"
       ]
@@ -76711,6 +76725,13 @@
     {
       "domain": "emets.su",
       "retrievedAt": "2026-01-13T21:19:28.557Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "emicdata.cl",
+      "retrievedAt": "2026-10-22T23:51:56.755Z",
       "providers": [
         "afraid.org"
       ]
