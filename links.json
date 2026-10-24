@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-23T23:45:54.450Z",
-  "count": 39383,
+  "generatedAt": "2026-10-24T22:52:05.131Z",
+  "count": 39384,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -68325,6 +68325,13 @@
     {
       "domain": "dominus-instalatii.ro",
       "retrievedAt": "2024-02-18T18:04:40.625Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "dominussy.com",
+      "retrievedAt": "2026-10-24T22:51:58.978Z",
       "providers": [
         "afraid.org"
       ]
