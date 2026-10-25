@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-24T22:52:05.131Z",
-  "count": 39384,
+  "generatedAt": "2026-10-25T23:02:27.497Z",
+  "count": 39390,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -95273,6 +95273,13 @@
       ]
     },
     {
+      "domain": "gestpol.es",
+      "retrievedAt": "2026-10-25T23:02:17.147Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "gestyvent.com",
       "retrievedAt": "2024-02-18T18:04:58.917Z",
       "providers": [
@@ -130149,6 +130156,13 @@
     {
       "domain": "kazhdom.ir",
       "retrievedAt": "2024-02-18T18:03:45.137Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "kazlotex.com",
+      "retrievedAt": "2026-10-25T23:02:15.144Z",
       "providers": [
         "afraid.org"
       ]
@@ -165688,6 +165702,13 @@
     {
       "domain": "myjamesonline.net",
       "retrievedAt": "2024-02-18T18:00:30.749Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "myk.sh",
+      "retrievedAt": "2026-10-25T23:02:23.059Z",
       "providers": [
         "afraid.org"
       ]
@@ -205320,6 +205341,13 @@
       ]
     },
     {
+      "domain": "rnft.eu",
+      "retrievedAt": "2026-10-25T23:02:18.150Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "rnintaiwan.com",
       "retrievedAt": "2026-01-13T21:19:07.517Z",
       "providers": [
@@ -231208,6 +231236,13 @@
     {
       "domain": "strathire.net",
       "retrievedAt": "2024-02-18T18:04:01.546Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "strathmfg.com",
+      "retrievedAt": "2026-10-25T23:02:20.148Z",
       "providers": [
         "afraid.org"
       ]
@@ -264941,6 +264976,13 @@
     {
       "domain": "whyido.ca",
       "retrievedAt": "2024-02-18T18:04:02.591Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "whynottrivia.com",
+      "retrievedAt": "2026-10-25T23:02:16.146Z",
       "providers": [
         "afraid.org"
       ]
