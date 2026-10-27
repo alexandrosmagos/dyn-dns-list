@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-25T23:02:27.497Z",
-  "count": 39390,
+  "generatedAt": "2026-10-27T00:13:16.520Z",
+  "count": 39392,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -62928,6 +62928,13 @@
     {
       "domain": "denkverbot.com",
       "retrievedAt": "2026-01-13T21:19:28.557Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "dennford.net",
+      "retrievedAt": "2026-10-27T00:13:10.283Z",
       "providers": [
         "afraid.org"
       ]
@@ -245194,6 +245201,13 @@
     {
       "domain": "tiengtrung.club",
       "retrievedAt": "2024-02-18T18:03:16.875Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "tierdesk.com",
+      "retrievedAt": "2026-10-27T00:13:09.286Z",
       "providers": [
         "afraid.org"
       ]
