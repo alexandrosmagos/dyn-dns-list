@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-27T00:13:16.520Z",
-  "count": 39392,
+  "generatedAt": "2026-10-28T00:14:18.974Z",
+  "count": 39393,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -127699,6 +127699,13 @@
     {
       "domain": "jungle.to",
       "retrievedAt": "2024-02-18T18:01:32.190Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "jungleexit.com",
+      "retrievedAt": "2026-10-28T00:14:14.857Z",
       "providers": [
         "afraid.org"
       ]
