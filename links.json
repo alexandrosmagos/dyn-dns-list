@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-28T00:14:18.974Z",
-  "count": 39393,
+  "generatedAt": "2026-10-29T00:35:58.809Z",
+  "count": 39397,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -95350,6 +95350,13 @@
       ]
     },
     {
+      "domain": "getfounddsos.net",
+      "retrievedAt": "2026-10-29T00:35:46.424Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "getfsbo.com",
       "retrievedAt": "2024-02-18T18:02:29.938Z",
       "providers": [
@@ -96388,6 +96395,13 @@
     {
       "domain": "git-rus.ru",
       "retrievedAt": "2024-02-18T18:00:41.826Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "git-software.cc",
+      "retrievedAt": "2026-10-29T00:35:54.427Z",
       "providers": [
         "afraid.org"
       ]
@@ -161724,6 +161738,13 @@
       ]
     },
     {
+      "domain": "mornlurian.space",
+      "retrievedAt": "2026-10-29T00:35:49.426Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "moro9215.com.ar",
       "retrievedAt": "2024-02-18T18:04:43.650Z",
       "providers": [
@@ -194367,6 +194388,13 @@
     {
       "domain": "prostitutkimsk.xyz",
       "retrievedAt": "2026-01-13T21:19:07.517Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "prosysaudit.ro",
+      "retrievedAt": "2026-10-29T00:35:22.410Z",
       "providers": [
         "afraid.org"
       ]
