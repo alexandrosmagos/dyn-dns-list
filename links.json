@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T00:35:58.809Z",
-  "count": 39397,
+  "generatedAt": "2026-10-30T00:35:13.390Z",
+  "count": 39401,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -95756,6 +95756,13 @@
       ]
     },
     {
+      "domain": "ghost-softs.cc",
+      "retrievedAt": "2026-10-30T00:35:10.523Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "ghostden.tk",
       "retrievedAt": "2024-02-18T18:04:41.619Z",
       "providers": [
@@ -167506,6 +167513,13 @@
       ]
     },
     {
+      "domain": "nanriss-love.cc",
+      "retrievedAt": "2026-10-30T00:35:10.523Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "nansenplaats.com",
       "retrievedAt": "2026-01-13T21:19:18.530Z",
       "providers": [
@@ -212978,6 +212992,13 @@
       ]
     },
     {
+      "domain": "savethehall.org",
+      "retrievedAt": "2026-10-30T00:35:10.524Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "savii.ro",
       "retrievedAt": "2024-02-18T18:02:47.063Z",
       "providers": [
@@ -230074,6 +230095,13 @@
     {
       "domain": "stellamarina.hu",
       "retrievedAt": "2026-01-13T21:19:34.569Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "stellarcloudstudios.com",
+      "retrievedAt": "2026-10-30T00:35:05.679Z",
       "providers": [
         "afraid.org"
       ]
