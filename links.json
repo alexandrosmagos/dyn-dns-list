@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-30T00:35:13.390Z",
-  "count": 39401,
+  "generatedAt": "2026-10-31T00:20:29.709Z",
+  "count": 39404,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -44084,6 +44084,13 @@
     {
       "domain": "chance-meeting.com",
       "retrievedAt": "2024-02-18T18:05:05.974Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "chanchoalhombro.cl",
+      "retrievedAt": "2026-10-31T00:20:25.690Z",
       "providers": [
         "afraid.org"
       ]
@@ -212607,6 +212614,13 @@
       ]
     },
     {
+      "domain": "sashindo.web.id",
+      "retrievedAt": "2026-10-31T00:20:22.699Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "sasi.com.np",
       "retrievedAt": "2024-02-18T18:00:48.890Z",
       "providers": [
@@ -248232,6 +248246,13 @@
     {
       "domain": "tovamiasto.com",
       "retrievedAt": "2025-12-01T21:16:00.733Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "tovel.cl",
+      "retrievedAt": "2026-10-31T00:20:06.688Z",
       "providers": [
         "afraid.org"
       ]
