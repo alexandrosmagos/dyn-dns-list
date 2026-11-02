@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-31T23:57:27.466Z",
-  "count": 39406,
+  "generatedAt": "2026-11-02T00:09:40.291Z",
+  "count": 39409,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -120403,6 +120403,13 @@
       ]
     },
     {
+      "domain": "itbvpn.com",
+      "retrievedAt": "2026-11-02T00:09:31.097Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "itchile.com",
       "retrievedAt": "2024-02-18T18:01:55.604Z",
       "providers": [
@@ -168858,7 +168865,7 @@
     },
     {
       "domain": "nel-chonnam.com",
-      "retrievedAt": "2024-02-18T18:05:32.914Z",
+      "retrievedAt": "2026-11-02T00:08:36.065Z",
       "providers": [
         "afraid.org"
       ]
@@ -208465,6 +208472,13 @@
     {
       "domain": "rubizone.de",
       "retrievedAt": "2024-02-18T18:05:24.074Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "rublconxray.com",
+      "retrievedAt": "2026-11-02T00:08:37.065Z",
       "providers": [
         "afraid.org"
       ]
@@ -250283,6 +250297,13 @@
     {
       "domain": "trustnet.com.au",
       "retrievedAt": "2024-02-18T18:02:50.064Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "trustpty.com",
+      "retrievedAt": "2026-11-02T00:08:38.065Z",
       "providers": [
         "afraid.org"
       ]
