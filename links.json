@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-02T00:09:40.291Z",
-  "count": 39409,
+  "generatedAt": "2026-11-03T02:47:41.170Z",
+  "count": 39410,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -73827,6 +73827,13 @@
     {
       "domain": "edificiocirrus.com.ar",
       "retrievedAt": "2024-02-18T18:03:26.029Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "edificiolosespinos.cl",
+      "retrievedAt": "2026-11-03T02:47:12.915Z",
       "providers": [
         "afraid.org"
       ]
