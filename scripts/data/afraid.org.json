@@ -232774,5 +232774,35 @@
     "domain": "mycptc.com",
     "age": "227 days ago (03/21/2026)",
     "retrievedAt": "2026-11-04T01:03:03.848Z"
+  },
+  {
+    "id": "1478524",
+    "domain": "impactephemere.com",
+    "age": "126 days ago (07/01/2026)",
+    "retrievedAt": "2026-11-05T01:16:11.555Z"
+  },
+  {
+    "id": "1483938",
+    "domain": "tataskue.ru",
+    "age": "0 days ago (11/03/2026)",
+    "retrievedAt": "2026-11-05T01:16:14.541Z"
+  },
+  {
+    "id": "1427901",
+    "domain": "benicass.im",
+    "age": "917 days ago (05/01/2024)",
+    "retrievedAt": "2026-11-05T01:16:14.542Z"
+  },
+  {
+    "id": "1483735",
+    "domain": "shiftmath.org",
+    "age": "6 days ago (10/29/2026)",
+    "retrievedAt": "2026-11-05T01:16:15.540Z"
+  },
+  {
+    "id": "1483943",
+    "domain": "malenkiy-karavan.ru",
+    "age": "0 days ago (11/04/2026)",
+    "retrievedAt": "2026-11-05T01:16:17.538Z"
   }
 ]

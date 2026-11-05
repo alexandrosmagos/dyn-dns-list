@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-04T01:03:09.241Z",
-  "count": 39412,
+  "generatedAt": "2026-11-05T01:16:20.015Z",
+  "count": 39417,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -28047,6 +28047,13 @@
     {
       "domain": "benguldan.org",
       "retrievedAt": "2024-02-18T18:01:44.286Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "benicass.im",
+      "retrievedAt": "2026-11-05T01:16:14.542Z",
       "providers": [
         "afraid.org"
       ]
@@ -114313,6 +114320,13 @@
       ]
     },
     {
+      "domain": "impactephemere.com",
+      "retrievedAt": "2026-11-05T01:16:11.555Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "impactgaming.com",
       "retrievedAt": "2024-02-18T18:05:14.846Z",
       "providers": [
@@ -148685,6 +148699,13 @@
     {
       "domain": "malematorras.com.ar",
       "retrievedAt": "2024-02-18T18:01:09.030Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "malenkiy-karavan.ru",
+      "retrievedAt": "2026-11-05T01:16:17.538Z",
       "providers": [
         "afraid.org"
       ]
@@ -219033,6 +219054,13 @@
       ]
     },
     {
+      "domain": "shiftmath.org",
+      "retrievedAt": "2026-11-05T01:16:15.540Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "shifttech.xyz",
       "retrievedAt": "2024-02-18T18:05:29.503Z",
       "providers": [
@@ -237627,6 +237655,13 @@
     {
       "domain": "tatarstana.ru",
       "retrievedAt": "2024-02-18T18:01:13.061Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "tataskue.ru",
+      "retrievedAt": "2026-11-05T01:16:14.541Z",
       "providers": [
         "afraid.org"
       ]
