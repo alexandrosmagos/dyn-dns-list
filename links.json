@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-05T01:16:20.015Z",
-  "count": 39417,
+  "generatedAt": "2026-11-06T01:21:48.281Z",
+  "count": 39419,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -133304,6 +133304,13 @@
       ]
     },
     {
+      "domain": "kmftresa.com",
+      "retrievedAt": "2026-11-06T01:21:31.731Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "kmicallef.com",
       "retrievedAt": "2024-02-18T18:03:56.512Z",
       "providers": [
@@ -207121,6 +207128,13 @@
     {
       "domain": "rootile.com",
       "retrievedAt": "2024-02-18T18:01:31.140Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "rootnroll.ar",
+      "retrievedAt": "2026-11-06T01:21:19.725Z",
       "providers": [
         "afraid.org"
       ]
