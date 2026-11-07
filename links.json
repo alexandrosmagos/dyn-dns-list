@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-06T01:21:48.281Z",
-  "count": 39419,
+  "generatedAt": "2026-11-07T00:36:22.229Z",
+  "count": 39422,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -148543,6 +148543,13 @@
       ]
     },
     {
+      "domain": "maklerhub.ru",
+      "retrievedAt": "2026-11-07T00:36:17.118Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "makmos.com",
       "retrievedAt": "2024-02-18T18:03:31.706Z",
       "providers": [
@@ -209331,6 +209338,13 @@
       ]
     },
     {
+      "domain": "rwxrwxrwx.com",
+      "retrievedAt": "2026-11-07T00:36:08.112Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "rxtech.cl",
       "retrievedAt": "2024-02-18T18:02:24.791Z",
       "providers": [
@@ -248085,6 +248099,13 @@
     {
       "domain": "totally-wild.com",
       "retrievedAt": "2024-02-18T18:04:01.550Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "totallynotx.com",
+      "retrievedAt": "2026-11-07T00:36:11.114Z",
       "providers": [
         "afraid.org"
       ]

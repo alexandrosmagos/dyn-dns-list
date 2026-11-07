@@ -232816,5 +232816,23 @@
     "domain": "kmftresa.com",
     "age": "3 days ago (11/02/2026)",
     "retrievedAt": "2026-11-06T01:21:31.731Z"
+  },
+  {
+    "id": "1484023",
+    "domain": "rwxrwxrwx.com",
+    "age": "0 days ago (11/06/2026)",
+    "retrievedAt": "2026-11-07T00:36:08.112Z"
+  },
+  {
+    "id": "1483530",
+    "domain": "totallynotx.com",
+    "age": "13 days ago (10/24/2026)",
+    "retrievedAt": "2026-11-07T00:36:11.114Z"
+  },
+  {
+    "id": "1481199",
+    "domain": "maklerhub.ru",
+    "age": "70 days ago (08/28/2026)",
+    "retrievedAt": "2026-11-07T00:36:17.118Z"
   }
 ]
