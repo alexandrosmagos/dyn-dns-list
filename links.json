@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-07T00:36:22.229Z",
-  "count": 39422,
+  "generatedAt": "2026-11-08T00:10:53.485Z",
+  "count": 39426,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -22342,6 +22342,13 @@
     {
       "domain": "automotiveimportmarket.com",
       "retrievedAt": "2025-08-13T21:08:34.152Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "automoto-sr.ch",
+      "retrievedAt": "2026-11-08T00:10:28.821Z",
       "providers": [
         "afraid.org"
       ]
@@ -73687,6 +73694,13 @@
     {
       "domain": "edebolegacy.com",
       "retrievedAt": "2024-02-18T18:02:59.021Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "edehost.com",
+      "retrievedAt": "2026-11-08T00:10:35.824Z",
       "providers": [
         "afraid.org"
       ]
@@ -147129,6 +147143,13 @@
       ]
     },
     {
+      "domain": "maasrazinternational.com",
+      "retrievedAt": "2026-11-08T00:10:44.832Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "maastopyoraily.fi",
       "retrievedAt": "2024-07-16T21:16:07.949Z",
       "providers": [
@@ -170777,6 +170798,13 @@
     {
       "domain": "nexvantage.net",
       "retrievedAt": "2024-02-18T18:02:31.939Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "nexvoltepcbd.com",
+      "retrievedAt": "2026-11-08T00:10:46.831Z",
       "providers": [
         "afraid.org"
       ]
