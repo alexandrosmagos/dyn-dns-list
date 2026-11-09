@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-08T00:10:53.485Z",
-  "count": 39426,
+  "generatedAt": "2026-11-09T00:28:21.982Z",
+  "count": 39429,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -53352,6 +53352,13 @@
     {
       "domain": "coresolar.de",
       "retrievedAt": "2026-01-13T21:19:28.557Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "corestack.vc",
+      "retrievedAt": "2026-11-09T00:28:13.881Z",
       "providers": [
         "afraid.org"
       ]
@@ -130504,6 +130511,13 @@
       ]
     },
     {
+      "domain": "kdxcode.eu",
+      "retrievedAt": "2026-11-09T00:28:16.889Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "kdyn.de",
       "retrievedAt": "2024-02-18T18:01:27.111Z",
       "providers": [
@@ -203369,6 +203383,13 @@
     {
       "domain": "retaliate.co.uk",
       "retrievedAt": "2024-02-18T18:00:55.946Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "retardedpornstar.com",
+      "retrievedAt": "2026-11-09T00:25:39.750Z",
       "providers": [
         "afraid.org"
       ]
