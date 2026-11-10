@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-09T00:28:21.982Z",
-  "count": 39429,
+  "generatedAt": "2026-11-10T03:08:44.904Z",
+  "count": 39434,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -122167,6 +122167,13 @@
       ]
     },
     {
+      "domain": "jaherin.com",
+      "retrievedAt": "2026-11-10T03:08:42.040Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "jahovaos.com",
       "retrievedAt": "2024-02-18T18:04:51.872Z",
       "providers": [
@@ -143407,6 +143414,13 @@
     {
       "domain": "littleville.com",
       "retrievedAt": "2024-02-18T18:01:33.150Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "liucco.fi",
+      "retrievedAt": "2026-11-10T03:08:42.039Z",
       "providers": [
         "afraid.org"
       ]
@@ -195387,6 +195401,13 @@
       ]
     },
     {
+      "domain": "public-wifi.net",
+      "retrievedAt": "2026-11-10T03:07:51.012Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "public.hk",
       "retrievedAt": "2024-02-18T18:04:44.649Z",
       "providers": [
@@ -215248,6 +215269,13 @@
     {
       "domain": "seba.cl",
       "retrievedAt": "2024-02-18T18:00:38.798Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "sebalabs.cl",
+      "retrievedAt": "2026-11-10T03:08:38.038Z",
       "providers": [
         "afraid.org"
       ]
@@ -268840,6 +268868,13 @@
     {
       "domain": "xd.one.pl",
       "retrievedAt": "2026-01-13T21:19:24.553Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "xdapierdolnik.pl",
+      "retrievedAt": "2026-11-10T03:08:40.038Z",
       "providers": [
         "afraid.org"
       ]
