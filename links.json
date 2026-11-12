@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-11T01:01:49.182Z",
-  "count": 39441,
+  "generatedAt": "2026-11-12T02:08:07.026Z",
+  "count": 39448,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -7852,6 +7852,13 @@
     {
       "domain": "aero-sales.ru",
       "retrievedAt": "2026-01-13T21:19:35.570Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "aero-xyz.com",
+      "retrievedAt": "2026-11-12T02:08:02.707Z",
       "providers": [
         "afraid.org"
       ]
@@ -38239,6 +38246,13 @@
     {
       "domain": "bwinab.com",
       "retrievedAt": "2024-02-18T18:04:05.597Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "bxgfxsh.cl",
+      "retrievedAt": "2026-11-12T02:08:00.708Z",
       "providers": [
         "afraid.org"
       ]
@@ -79777,6 +79791,13 @@
     {
       "domain": "estamoson.pt",
       "retrievedAt": "2026-01-13T21:19:43.575Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "estavan.pl",
+      "retrievedAt": "2026-11-12T02:07:45.698Z",
       "providers": [
         "afraid.org"
       ]
@@ -161346,6 +161367,13 @@
       ]
     },
     {
+      "domain": "montraxyz.com",
+      "retrievedAt": "2026-11-12T02:08:01.708Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "montyconsulting.net",
       "retrievedAt": "2024-03-14T21:09:52.454Z",
       "providers": [
@@ -178629,6 +178657,13 @@
       ]
     },
     {
+      "domain": "openbrainstorm.com",
+      "retrievedAt": "2026-11-12T02:07:59.706Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "openbravo.co.id",
       "retrievedAt": "2024-03-14T21:11:41.614Z",
       "providers": [
@@ -192883,6 +192918,13 @@
     {
       "domain": "primper.com.ar",
       "retrievedAt": "2024-02-18T18:03:33.754Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "primuslabsxyz.com",
+      "retrievedAt": "2026-11-12T02:08:02.708Z",
       "providers": [
         "afraid.org"
       ]
@@ -261742,6 +261784,13 @@
     {
       "domain": "w8gfw.com",
       "retrievedAt": "2024-02-18T18:04:02.587Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "w9rix.com",
+      "retrievedAt": "2026-11-12T02:08:02.707Z",
       "providers": [
         "afraid.org"
       ]
