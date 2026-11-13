@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-12T02:08:07.026Z",
-  "count": 39448,
+  "generatedAt": "2026-11-13T01:40:32.051Z",
+  "count": 39449,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -101484,6 +101484,13 @@
     {
       "domain": "gt80.com",
       "retrievedAt": "2024-02-18T18:04:08.694Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "gta.cx",
+      "retrievedAt": "2026-11-13T01:40:08.057Z",
       "providers": [
         "afraid.org"
       ]
