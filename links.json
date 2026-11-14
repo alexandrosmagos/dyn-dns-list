@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-13T01:40:32.051Z",
-  "count": 39449,
+  "generatedAt": "2026-11-14T01:12:55.465Z",
+  "count": 39453,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -13375,6 +13375,13 @@
     {
       "domain": "amendoliaehijos.com.ar",
       "retrievedAt": "2024-02-18T18:03:20.849Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "amener.gy",
+      "retrievedAt": "2026-11-14T01:12:48.503Z",
       "providers": [
         "afraid.org"
       ]
@@ -150286,6 +150293,13 @@
       ]
     },
     {
+      "domain": "margutm.su",
+      "retrievedAt": "2026-11-14T01:12:38.497Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "maria-keramik.de",
       "retrievedAt": "2024-08-11T21:16:12.124Z",
       "providers": [
@@ -226012,6 +226026,13 @@
       ]
     },
     {
+      "domain": "som.lv",
+      "retrievedAt": "2026-11-14T01:12:27.489Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "soma-wellness.com.au",
       "retrievedAt": "2024-02-18T18:02:17.750Z",
       "providers": [
@@ -273754,6 +273775,13 @@
     {
       "domain": "zanity.net",
       "retrievedAt": "2024-02-18T18:00:22.079Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "zanju.rs",
+      "retrievedAt": "2026-11-14T01:12:49.504Z",
       "providers": [
         "afraid.org"
       ]
