@@ -25,5 +25,10 @@
     "cheerio": "1.2.0",
     "dotenv": "17.4.2",
     "puppeteer": "25.9.0"
+  },
+  "overrides": {
+    "cheerio": {
+      "undici": "8.12.2"
+    }
   }
 }
