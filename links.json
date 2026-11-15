@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-14T01:12:55.465Z",
-  "count": 39453,
+  "generatedAt": "2026-11-15T00:38:58.643Z",
+  "count": 39455,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -108582,6 +108582,13 @@
     {
       "domain": "homaei.ir",
       "retrievedAt": "2024-02-18T18:03:55.524Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "homaidanh.vn",
+      "retrievedAt": "2026-11-15T00:38:43.003Z",
       "providers": [
         "afraid.org"
       ]
@@ -272389,6 +272396,13 @@
     {
       "domain": "yo3bn.ro",
       "retrievedAt": "2025-02-28T14:22:00.646Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "yo7jyl.ro",
+      "retrievedAt": "2026-11-15T00:38:50.007Z",
       "providers": [
         "afraid.org"
       ]
