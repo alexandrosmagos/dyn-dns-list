@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-16T00:39:09.128Z",
-  "count": 39455,
+  "generatedAt": "2026-11-17T03:24:06.310Z",
+  "count": 39457,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -86049,6 +86049,13 @@
     {
       "domain": "findic.cl",
       "retrievedAt": "2025-05-02T21:08:29.517Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "finditfixit.au",
+      "retrievedAt": "2026-11-17T03:23:55.945Z",
       "providers": [
         "afraid.org"
       ]
@@ -229395,6 +229402,13 @@
     {
       "domain": "ssu.mx",
       "retrievedAt": "2024-02-18T18:05:32.926Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "ssurpropiedades.cl",
+      "retrievedAt": "2026-11-17T03:24:01.946Z",
       "providers": [
         "afraid.org"
       ]
