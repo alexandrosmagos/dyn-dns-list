@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-17T03:24:06.310Z",
-  "count": 39457,
+  "generatedAt": "2026-11-18T02:44:37.381Z",
+  "count": 39458,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -106664,6 +106664,13 @@
     {
       "domain": "heybryan.org",
       "retrievedAt": "2024-02-18T18:02:04.641Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "heycozyhomey.com",
+      "retrievedAt": "2026-11-18T02:44:26.729Z",
       "providers": [
         "afraid.org"
       ]
