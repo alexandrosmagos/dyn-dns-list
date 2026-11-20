@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-19T02:13:35.935Z",
-  "count": 39460,
+  "generatedAt": "2026-11-20T02:01:57.088Z",
+  "count": 39466,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -48081,6 +48081,13 @@
     {
       "domain": "clhoernlein.de",
       "retrievedAt": "2024-02-18T18:02:27.930Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "clicademia.com",
+      "retrievedAt": "2026-11-20T02:01:24.244Z",
       "providers": [
         "afraid.org"
       ]
@@ -126731,6 +126738,13 @@
       ]
     },
     {
+      "domain": "josephdlandscaping.co.za",
+      "retrievedAt": "2026-11-20T02:01:46.257Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "josephglen.com",
       "retrievedAt": "2024-02-18T18:03:30.723Z",
       "providers": [
@@ -135525,6 +135539,13 @@
     {
       "domain": "krumbholz.tk",
       "retrievedAt": "2024-02-18T18:04:32.235Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "krumblecorner.co.za",
+      "retrievedAt": "2026-11-20T02:01:28.251Z",
       "providers": [
         "afraid.org"
       ]
@@ -165597,6 +165618,13 @@
     {
       "domain": "mydomohome.eu",
       "retrievedAt": "2024-02-18T18:02:17.738Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "mydreamworld.co.za",
+      "retrievedAt": "2026-11-20T02:01:44.253Z",
       "providers": [
         "afraid.org"
       ]
@@ -233558,6 +233586,13 @@
       ]
     },
     {
+      "domain": "suntcrestin.ro",
+      "retrievedAt": "2026-11-20T02:01:53.261Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
       "domain": "suomalaisapu.fi",
       "retrievedAt": "2024-02-18T18:02:25.913Z",
       "providers": [
@@ -235583,6 +235618,13 @@
     {
       "domain": "syn-ack.be",
       "retrievedAt": "2024-02-18T18:01:33.149Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "syn-ack.eu",
+      "retrievedAt": "2026-11-20T02:01:51.258Z",
       "providers": [
         "afraid.org"
       ]
