@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-20T02:01:57.088Z",
-  "count": 39466,
+  "generatedAt": "2026-11-21T01:58:37.917Z",
+  "count": 39467,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -64923,6 +64923,13 @@
     {
       "domain": "diazlonghi.com.ar",
       "retrievedAt": "2024-02-18T18:01:23.019Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "dibu.ca",
+      "retrievedAt": "2026-11-21T01:58:00.424Z",
       "providers": [
         "afraid.org"
       ]
