@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-21T01:58:37.917Z",
-  "count": 39467,
+  "generatedAt": "2026-11-22T00:54:10.270Z",
+  "count": 39468,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -197118,6 +197118,13 @@
     {
       "domain": "qts.ar",
       "retrievedAt": "2026-10-06T01:41:12.309Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "qtx.ro",
+      "retrievedAt": "2026-11-22T00:54:06.676Z",
       "providers": [
         "afraid.org"
       ]
