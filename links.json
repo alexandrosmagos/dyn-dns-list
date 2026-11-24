@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-23T01:22:17.572Z",
-  "count": 39468,
+  "generatedAt": "2026-11-24T05:08:31.222Z",
+  "count": 39470,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -6151,6 +6151,13 @@
     {
       "domain": "acotel.es",
       "retrievedAt": "2024-02-18T18:02:07.669Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "acquadeep.com",
+      "retrievedAt": "2026-11-24T05:08:18.065Z",
       "providers": [
         "afraid.org"
       ]
@@ -227568,6 +227575,13 @@
     {
       "domain": "spbaral.com.np",
       "retrievedAt": "2024-02-18T18:05:03.295Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "spboootransauto.ru",
+      "retrievedAt": "2026-11-24T05:08:18.064Z",
       "providers": [
         "afraid.org"
       ]
