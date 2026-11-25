@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-24T05:08:31.222Z",
-  "count": 39470,
+  "generatedAt": "2026-11-25T03:58:02.283Z",
+  "count": 39471,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -141258,6 +141258,13 @@
     {
       "domain": "lettenmair.com",
       "retrievedAt": "2024-02-18T18:02:43.019Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "lettragemarceau.com",
+      "retrievedAt": "2026-11-25T03:57:55.138Z",
       "providers": [
         "afraid.org"
       ]
