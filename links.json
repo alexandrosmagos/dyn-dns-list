@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-25T03:58:02.283Z",
-  "count": 39471,
+  "generatedAt": "2026-11-26T03:22:47.371Z",
+  "count": 39473,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -45967,6 +45967,13 @@
     {
       "domain": "chocolatespicacho.com",
       "retrievedAt": "2024-02-18T18:00:30.748Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "chocolatesrucamalal.cl",
+      "retrievedAt": "2026-11-26T03:22:34.296Z",
       "providers": [
         "afraid.org"
       ]
@@ -189971,6 +189978,13 @@
     {
       "domain": "plumaroja.com.ar",
       "retrievedAt": "2024-02-18T18:01:07.020Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "plumber-dex.co.il",
+      "retrievedAt": "2026-11-26T03:22:36.296Z",
       "providers": [
         "afraid.org"
       ]
