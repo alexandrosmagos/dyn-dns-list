@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-26T03:22:47.371Z",
-  "count": 39473,
+  "generatedAt": "2026-11-27T03:28:42.249Z",
+  "count": 39475,
   "domains": [
     {
       "domain": "0000000000000000000000.com",
@@ -81072,6 +81072,13 @@
     {
       "domain": "ev73.ru",
       "retrievedAt": "2024-02-18T18:01:13.059Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "eva-wyss.ch",
+      "retrievedAt": "2026-11-27T03:28:25.598Z",
       "providers": [
         "afraid.org"
       ]
@@ -245859,6 +245866,13 @@
     {
       "domain": "tilvey.com",
       "retrievedAt": "2024-02-18T18:05:03.301Z",
+      "providers": [
+        "afraid.org"
+      ]
+    },
+    {
+      "domain": "timber-homes.ro",
+      "retrievedAt": "2026-11-27T03:28:27.599Z",
       "providers": [
         "afraid.org"
       ]
